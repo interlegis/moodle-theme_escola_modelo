@@ -1,18 +1,46 @@
 <?php
-// Every file should have GPL and copyright in the header - we skip it in tutorials but you should not skip it for real.
- 
-// This line protects the file from being accessed by a URL directly.                                                               
-defined('MOODLE_INTERNAL') || die();                                                                                                
- 
-// A description shown in the admin theme selector.                                                                                 
-$string['choosereadme'] = 'Theme photo is a child theme of Boost. It adds the ability to upload background photos.';                
-// The name of our plugin.                                                                                                          
-$string['pluginname'] = 'Photo';                                                                                                    
-// We need to include a lang string for each block region.                                                                          
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Language file.
+ *
+ * @package   theme_escola_modelo
+ * @copyright 2016 Frédéric Massart
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+defined('MOODLE_INTERNAL') || die();
+
+$string['advancedsettings'] = 'Advanced settings';
+$string['backgroundimage'] = 'Background image';
+$string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';
+$string['brandcolor'] = 'Brand colour';
+$string['brandcolor_desc'] = 'The accent colour.';
+$string['choosereadme'] = 'Escola_modelo is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['currentinparentheses'] = '(current)';
+$string['configtitle'] = 'Escola_modelo';
+$string['generalsettings'] = 'General settings';
+$string['pluginname'] = 'Escola_modelo';
+$string['presetfiles'] = 'Additional theme preset files';
+$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Escola_modelo_Presets>Escola_modelo presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/escola_modelo>Presets repository</a> for presets that others have shared.';
+$string['preset'] = 'Theme preset';
+$string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
+$string['privacy:metadata'] = 'The Escola_modelo theme does not store any personal data about any user.';
+$string['rawscss'] = 'Raw SCSS';
+$string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
+$string['rawscsspre'] = 'Raw initial SCSS';
+$string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['region-side-pre'] = 'Right';
-
-
-// Background image for login page.                                                                                                 
-$string['loginbackgroundimage'] = 'Login page background image';                                                                    
-// Background image for login page.                                                                                                 
-$string['loginbackgroundimage_desc'] = 'An image that will be stretched to fill the background of the login page.';
