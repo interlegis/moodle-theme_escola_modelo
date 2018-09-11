@@ -1,0 +1,51 @@
+{{!
+    @template theme_escola_modelo/maintenance
+
+    ILB maintenance layout template.
+
+    Context variables required for this template:
+    * output - The core renderer for the page
+
+    Example context (json):
+    {
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Test page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         }
+    }
+}}
+<!-- Barra de Navegação dentro do Curso -->
+<style>
+      .NavGlobal {
+        background-color: #00305c;
+        border-bottom: 4px solid #00824a;
+        box-shadow: 0 4px 0 #fae042;
+      }
+</style>
+
+<!-- Bootstrap CDN - CSS do Bootstrap -->
+
+<script src="https://use.fontawesome.com/b95b184b26.js"></script>
+
+
+<!-- Ícones da aba do navegador -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{{ output.favicon }}}">
+<link rel="icon" type="image/ico" href="{{{ output.favicon }}}" sizes="32x32" />
+<link rel="icon" type="image/ico" href="{{{ output.favicon }}}" sizes="192x192" />
+<link rel="icon" type="image/ico" href="{{{ output.favicon }}}" sizes="96x96" />
+<link rel="icon" type="image/ico" href="{{{ output.favicon }}}" sizes="16x16" />
+
+<!-- Links para tinymce CSS-->
+<link rel="stylesheet" type="text/css" href="{{{moodle_url}}}/theme/escola_modelo/style/collapse-image.css" />
+<link rel="stylesheet" type="text/css" href="{{{moodle_url}}}/theme/escola_modelo/style/sanfona.css" />
+<link rel="stylesheet" type="text/css" href="{{{moodle_url}}}/theme/escola_modelo/style/tabs.css" />
+
+<!-- Links para tinymce JS -->
+<script type="text/javascript" src="{{{moodle_url}}}/theme/escola_modelo/js/jquery.js" ></script>
+<script type="text/javascript" src="{{{moodle_url}}}/theme/escola_modelo/js/collapse-image.js" ></script>
+<script type="text/javascript" src="{{{moodle_url}}}/theme/escola_modelo/js/sanfona.js" ></script>
+<script type="text/javascript" src="{{{moodle_url}}}/theme/escola_modelo/js/tabs.js" ></script>
+
+

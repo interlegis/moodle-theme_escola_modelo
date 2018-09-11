@@ -15,19 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy Subsystem implementation for theme_escola_modelo.
+ * Privacy Subsystem implementation for theme_boost.
  *
- * @package    theme_escola_modelo
+ * @package    theme_boost
  * @copyright  2018 Andrew Nicols <andrew@nicols.co.uk>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_escola_modelo\privacy;
+namespace theme_boost\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * The escola_modelo theme does not store any data.
+ * The boost theme does not store any data.
  *
  * @copyright  2018 Andrew Nicols <andrew@nicols.co.uk>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

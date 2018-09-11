@@ -1,0 +1,38 @@
+.div-all-collapse{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.caixa-collapse {
+	display: none;
+	padding : 5px;
+	background: url(../pix/smarts/bg_saiba_mais2_9tr_curso.png) right top no-repeat, url(../pix/smarts/bg_saiba_mais2_9br_curso.png) right bottom no-repeat, url(../pix/smarts/bg_saiba_mais2_9bl_curso.png) left bottom no-repeat, url(../pix/smarts/bg_saiba_mais2_9tl_curso.png) left top no-repeat, url(../pix/smarts/bg_saiba_mais2_9r_curso.png) right repeat-y, url(../pix/smarts/bg_saiba_mais2_9l_curso.png) left repeat-y, url(../pix/smarts/bg_saiba_mais2_9meio_curso.png) repeat;
+	font-size: 16px;
+	text-align: justify;
+	padding: 20px 14% 6% 13%;
+	margin: 40px auto;
+	position: relative;
+	content: '';
+}
+
+/*.caixa-collapse p{
+	letter-spacing: -0.06rem;
+	line-height: 2.7rem;
+	word-spacing: 0.2rem;
+}*/
+
+.div-collapse{
+	text-align: center;
+}
+
+/*.caixa-collapse::before{
+	content: '';
+	background: url(../pix/smarts/bg_saiba_mais2_header2_curso) center top no-repeat;
+	width: 68px;
+	width: 72%;
+	height: 35px;
+	display: block;
+	top: -35px;
+	position: absolute;
+}*/
+

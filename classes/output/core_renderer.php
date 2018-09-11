@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace theme_escola_modelo\output;
+namespace theme_boost\output;
 
 use coding_exception;
 use html_writer;
@@ -40,7 +40,7 @@ defined('MOODLE_INTERNAL') || die;
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_escola_modelo
+ * @package    theme_boost
  * @copyright  2012 Bas Brands, www.basbrands.nl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

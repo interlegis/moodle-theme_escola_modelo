@@ -1,0 +1,160 @@
+
+/* - ++resource++static/css/escola-de-governo.css - */
+@media screen {
+/* https://www12.senado.leg.br/institucional/portal_css/++resource++static/css/escola-de-governo.css?original=1 */
+.PortalTopo-redes-sociais{
+float: left;
+margin-top: 28px;
+padding-left: 100px;
+}
+.portal-search-smart{
+visibility: visible;
+}
+.portal-search .busca-gsa{
+visibility: visible;
+}
+.busca-smartphone .busca-gsa{
+visibility: visible;
+}
+.busca-smartphone .busca-plone{
+visibility: hidden;
+}
+.painel-corpo ul li{
+border-bottom:dotted 1px #777;
+}
+.painel-corpo ul li:last-child{
+border-bottom: none;
+}
+#category {
+display: none !important;
+}
+.carousel-control{
+background:none;
+background-image:none !important;
+top:364px;
+opacity:1;
+z-index:1;
+}
+.carousel-indicators li {
+border: 2px solid #999!important;
+}
+.carousel-caption {
+position: relative;
+left: auto;
+right: auto;
+background-color:#eee !important;
+opacity:1 !important;
+text-shadow:none;
+z-index:0;
+}
+.div-contato{
+border: 1px solid #cdcdcd;
+display: inline-block;
+padding-left: 13px;
+padding-right: 5px;
+padding-top: 7px;
+padding-bottom: 7px;
+margin-top: 10px;
+width: 100%;
+}
+.div-contato-pos{
+border: 1px solid #cdcdcd;
+display: inline-block;
+padding-left: 13px;
+padding-right: 5px;
+padding-top: 7px;
+padding-bottom: 7px;
+margin-top: 10px;
+margin-bottom: 24px;
+width: 100%;
+}
+.conteudo-evento{
+border: 1px solid #ccc;
+margin-top: 20px;
+min-height: 574px;
+padding-left:20px;
+}
+.informacoes-evento{
+margin:23px;
+}
+.post-it {
+margin-bottom: 30px;
+min-height: 100px;
+padding-top: 10px;
+}
+.texto-evento {
+margin: 6px;
+}
+.titulo-secao{
+font-size:20px
+}
+.ullidestaque{
+list-style:none;
+font-size: 13px;
+padding-bottom: 12px;
+margin-top: 12px;
+}
+#box-enquete{
+margin-top:7px;
+}
+#slide-home{
+margin-top:10px;
+}
+.linha-inferior-evento{
+border-bottom:1px dotted #cdcdcd;
+padding-top: 75px;
+margin-bottom: 10px;
+}
+.caixa-banner{
+border:1px solid #cdcdcd; padding-top: 20px;padding-left: 20px;padding-right: 10px;min-height:110px;
+}
+.caixa-banner-ilb{
+border-bottom: 1px dotted #ccc;margin-bottom:20px;padding-bottom:8px;
+}
+@media (max-width: 480px){
+.linha-inferior-evento{
+padding-top: 115px;
+}
+.PortalTopo-busca {
+width: 100% !important;
+}
+.PortalTopo-redes-sociais{
+width: 100% !important;
+float: left;
+margin-top: 10px;
+padding-left: 30px;
+}
+}
+@media (min-width: 768px){
+.PortalTopo-id {
+width: 42% !important;
+}
+.PortalTopo-redes-sociais{
+width: 24% !important;
+padding-left: 100px;
+}
+.PortalTopo-busca{
+width: 33% !important;
+}
+}
+@media (min-width: 992px){
+.PortalTopo-id {
+width: 50% !important;
+}
+.PortalTopo-redes-sociais{
+padding-left: 88px;
+width: 17% !important;
+}
+}
+@media (min-width: 1200px){
+.PortalTopo-id {
+width: 50% !important;
+}
+.PortalTopo-redes-sociais{
+width: 17% !important;
+padding-left: 120px;
+}
+}
+
+}
+

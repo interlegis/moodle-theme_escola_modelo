@@ -17,12 +17,12 @@
 /**
  * Question renderer.
  *
- * @package    theme_escola_modelo
+ * @package    theme_boost
  * @copyright  2017 onwards Ankit Agarwal <ankit.agrr@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_escola_modelo\output\core_question;
+namespace theme_boost\output\core_question;
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/' . $CFG->admin . '/renderer.php');
@@ -30,7 +30,7 @@ require_once($CFG->dirroot . '/' . $CFG->admin . '/renderer.php');
 /**
  * Question renderer class.
  *
- * @package    theme_escola_modelo
+ * @package    theme_boost
  * @copyright  2017 onwards Ankit Agarwal <ankit.agrr@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

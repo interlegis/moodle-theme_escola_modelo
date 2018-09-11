@@ -23,7 +23,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
-    $settings = new theme_escola_modelo_admin_settingspage_tabs('themesettingescola_modelo', get_string('configtitle', 'theme_escola_modelo'));
+    $settings = new theme_boost_admin_settingspage_tabs('themesettingescola_modelo', get_string('configtitle', 'theme_escola_modelo'));
     $page = new admin_settingpage('theme_escola_modelo_general', get_string('generalsettings', 'theme_escola_modelo'));
 
     // Preset.
@@ -40,7 +40,7 @@ if ($ADMIN->fulltree) {
     foreach ($files as $file) {
         $choices[$file->get_filename()] = $file->get_filename();
     }
-    // These are the built in presets.
+    // These are the built in presets from BOost.
     $choices['default.scss'] = 'default.scss';
     $choices['plain.scss'] = 'plain.scss';
 
@@ -57,6 +57,7 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
+// INICIO EDU
     // Background image setting.
     $name = 'theme_escola_modelo/backgroundimage';
     $title = get_string('backgroundimage', 'theme_escola_modelo');
@@ -64,8 +65,9 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'backgroundimage');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+// FIM EDU
 
-    // Variable $body-color.
+    // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_escola_modelo/brandcolor';
     $title = get_string('brandcolor', 'theme_escola_modelo');
@@ -81,13 +83,13 @@ if ($ADMIN->fulltree) {
     $page = new admin_settingpage('theme_escola_modelo_advanced', get_string('advancedsettings', 'theme_escola_modelo'));
 
     // Raw SCSS to include before the content.
-    $setting = new admin_setting_scsscode('theme_escola_modelo/scsspre',
+    $setting = new admin_setting_configtextarea('theme_escola_modelo/scsspre',
         get_string('rawscsspre', 'theme_escola_modelo'), get_string('rawscsspre_desc', 'theme_escola_modelo'), '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Raw SCSS to include after the content.
-    $setting = new admin_setting_scsscode('theme_escola_modelo/scss', get_string('rawscss', 'theme_escola_modelo'),
+    $setting = new admin_setting_configtextarea('theme_escola_modelo/scss', get_string('rawscss', 'theme_escola_modelo'),
         get_string('rawscss_desc', 'theme_escola_modelo'), '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

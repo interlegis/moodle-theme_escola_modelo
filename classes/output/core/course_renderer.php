@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_escola_modelo\output\core;
+namespace theme_boost\output\core;
 defined('MOODLE_INTERNAL') || die();
 
 use moodle_url;
@@ -75,7 +75,7 @@ class course_renderer extends \core_course_renderer {
             'value' => $value
         ];
 
-        return $this->render_from_template('theme_escola_modelo/course_search_form', $data);
+        return $this->render_from_template('theme_boost/course_search_form', $data);
     }
 
 }

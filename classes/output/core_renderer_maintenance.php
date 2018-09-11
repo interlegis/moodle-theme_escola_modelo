@@ -18,12 +18,12 @@
 /**
  * Overriden core maintenance renderer.
  *
- * @package    theme_escola_modelo
+ * @package    theme_boost
  * @copyright  2016 Frédéric Massart - FMCorz.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_escola_modelo\output;
+namespace theme_boost\output;
 defined('MOODLE_INTERNAL') || die();
 
 use coding_exception;
@@ -34,7 +34,7 @@ use stdClass;
 /**
  * The maintenance renderer.
  *
- * @package    theme_escola_modelo
+ * @package    theme_boost
  * @copyright  2016 Frédéric Massart - FMCorz.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

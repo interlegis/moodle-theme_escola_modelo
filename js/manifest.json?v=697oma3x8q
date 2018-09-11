@@ -1,0 +1,11 @@
+{
+	"icons": [
+		{
+			"src": "\/noticias\/++resource++senado.noticias\/favicon\/android-chrome-192x192.png?v=697oma3x8q",
+			"sizes": "192x192",
+			"type": "image\/png"
+		}
+	],
+	"theme_color": "#00305c",
+	"display": "browser"
+}

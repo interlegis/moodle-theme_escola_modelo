@@ -1,0 +1,321 @@
+/*########################################
+  Tema
+  ########################################*/
+body {
+    font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans','Geneva','Verdana','sans-serif';
+    line-height: 1.428;
+}
+#tema {
+    /* width: 100%; */
+    margin: 0 auto;
+}
+#tema-portal {
+    min-height: 400px;
+}
+/* #bannerLocal { */
+/*     background-image: url("++theme++senado.tema/senado/img/sub-osenado.jpg"); */
+/*     color: #FFFFFF; */
+/*     height: 70px; */
+/*     margin: 0 auto; */
+/*     text-align: left; */
+/*     width: 995px; */
+/* } */
+a#portal-home-link {
+}
+#portal-menu {
+    margin-bottom: 0px;
+}
+#toolbar {
+    overflow: auto;
+    clear: right;
+}
+
+#portal-breadcrumbs {
+    float: left;
+}
+.portal-breadcrumbs {
+    display: none;
+}
+#breadcrumbs-you-are-here {
+  display: none;
+}
+#breadcrumbs-you-are-here + li::before {
+  display: none;
+}
+.portal-breadcrumbs > ol > li:last-of-type {
+  color: #777;
+}
+
+#portal-personaltools-wrapper {
+    float: right;
+}
+.portal-personaltools-wrapper {
+    display: none;
+}
+
+/* Barra de login */
+.portal-login {
+    display: none;
+}
+.portal-login {
+    float: right;
+    font-size: 11px;
+    margin-bottom: 1em;
+}
+.portal-login ins {
+    margin-right: 12px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#content h1.documentFirstHeading {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  font-size: 28px;
+  margin-top: 10px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.1px;
+}
+
+/*########################################
+  Adaptações senado.essencial
+  ########################################*/
+/* @font-face { */
+/*   font-family: 'Glyphicons Halflings'; */
+/*   src: url('fonts/glyphicons-halflings-regular.eot'); */
+/*   src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg'); */
+/* } */
+.PortalTopo-id a {
+  color: #3e6892;
+  text-decoration: none;
+}
+.PortalTopo-id .PortalTopo-sub a {
+  color: #999;
+  text-decoration: none;
+}
+.PortalTopo-title a img {
+  width: 190px;
+}
+.PortalTopo-busca > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Nav--secundaria {
+  padding-left: 0;
+  padding-right: 0;
+}
+.Nav--secundaria > ul > li:not(:last-child)::after {   
+   line-height: 23px;
+}
+/* Extra small - Phone */
+@media(max-width:767px){
+
+    .PortalTopo-busca > div {
+      display: inherit;
+      margin: 10px 0 0;
+    }
+    .Nav--secundaria {
+      background-color: transparent;
+      float: right;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .Nav--secundaria > ul {
+      float: none !important;
+    }
+    .Nav--secundaria > ul > li > a {
+      font-size: 12px;
+      line-height: 26px;
+    }
+
+} /* @media xs */
+
+navbar-inverse {
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #777;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #333;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+  background-color: transparent;
+  color: #333;
+}
+.navbar-senado {
+}
+.navbar-senado .dropdown-menu > li {
+    display: block;
+}
+p.busca-avancada a {
+    color: #3e6892;
+}
+
+#footer-institucional {
+    clear: both;
+    padding-top: 40px;
+}
+#portal-columns {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*########################################
+  Accordion
+  ########################################*/
+.accordion {
+  position: relative;
+}
+.accordion > .accordion-group {
+  border: 1px solid #e5e5e5;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+.accordion > .accordion-group > .accordion-heading {
+  border-bottom: 1px solid #ddd;
+  color: #3e6892;
+  font-size: 18px;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+.accordion .accordion-caret .accordion-toggle.collapsed::before {
+  content: "▸";
+}
+.accordion .accordion-caret .accordion-toggle:not(.collapsed)::before {
+  content: "▾";
+}
+.accordion .accordion-caret .accordion-toggle::before {
+  font-size: 25px;
+/*   vertical-align: -3px; */
+/*   line-height: 21px; */
+  margin-right: 0;
+  position: absolute;
+  right: 20px;
+}
+.accordion .accordion-inner {
+  border-top: 1px solid #e5e5e5;
+  padding: 8px 15px;
+}
+#content a.accordion-toggle:hover,
+#content a.accordion-toggle:focus {
+  color: #28425c !important;
+  text-decoration: none;
+}
+
+/*########################################
+  Carousel
+  ########################################*/
+.carousel .item img {
+  margin: auto;
+}
+.carousel-indicators {
+  top: 10px;
+  height: 10px;
+}
+.carousel-control {
+  cursor: alias;
+  text-shadow: 2px 2px 0 #000;
+}
+.carousel-control span {
+  color: white;
+}
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+  right: 19%;
+  font-size: 22px;
+}
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+  left: 19%;
+  font-size: 22px;
+}
+/* Carousel control color. */
+/* .carousel-control.right { */
+/*   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, #00305c 100%); */
+/* } */
+/* .carousel-control.left { */
+/*   background-image: linear-gradient(to right, #00305c 0px, rgba(0, 0, 0, 0) 100%); */
+/* } */
+.carousel-caption {
+  background-color: black;
+  bottom: 0;
+  max-height: 35%;
+  left: 0;
+  opacity: 0.7;
+  padding-left: 15px;
+  padding-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+.carousel-caption p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 14px;
+}
+
+/* Carousel Caption Quadro */
+.carousel-caption-quadro {
+  background-color: black;
+  bottom: 5%;
+  left: 5%;
+  max-height: 90%;
+  opacity: 0.7;
+  padding-left: 10px;
+  padding-right: 3px;
+  padding-top: 10px;
+  text-align: left;
+  width: 24%;
+}
+
+#painel-em-manutencao {
+  background: white none repeat scroll 0 0;
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: arial;
+}
+#painel-em-manutencao i {
+  color: orange;
+}
+
+
+
+/*
+============================== 
+Bootstrap Media Queries
+==============================
+*/
+
+/* Extra small - Phone */
+@media(max-width:767px){
+
+.carousel-caption {
+  position: static;
+}
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+  top: 30%;
+}
+
+} /* @media xs */
+
+/* Small - Tablet */
+@media(min-width:768px){
+
+} /* @media sm */
+
+/* Medium - Desktop */
+@media(min-width:992px){
+
+} /* @media md */
+
+/* Large - Desktop */
+@media(min-width:1200px){
+
+} /* @media lg */

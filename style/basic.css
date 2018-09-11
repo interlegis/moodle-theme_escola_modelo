@@ -1,0 +1,44 @@
+/*########################################
+  Basic Style
+  ########################################*/
+
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.clear {
+    clear:both;
+}
+.s-hidden {
+    visibility: hidden;
+}
+.nodisplay {
+	  display: none;
+}
+
+/**
+Table
+**/
+.table {
+  display: table;
+  width: 100%;
+}
+.tr {
+  display: table-row;
+}
+.td {
+  display: table-cell;
+}
+
+

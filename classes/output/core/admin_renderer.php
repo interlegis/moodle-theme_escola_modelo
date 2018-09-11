@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_escola_modelo\output\core;
+namespace theme_boost\output\core;
 defined('MOODLE_INTERNAL') || die();
 
 use moodle_url;

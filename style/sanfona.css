@@ -1,0 +1,39 @@
+.sanfona {
+    background-color: #3e6892;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.sanfona_div p{
+    padding-top: 10px;
+}
+
+.sanfona:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active-sanfona:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.active-sanfona, .sanfona:hover {
+    background-color: #4d7dad;
+}
+
+.painel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}

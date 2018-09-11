@@ -15,45 +15,74 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A two column layout for the escola_modelo theme.
+ * A one column layout for the escola_modelo theme.
  *
  * @package   theme_escola_modelo
  * @copyright 2016 Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-global $DB;
+
 defined('MOODLE_INTERNAL') || die();
 
-user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
-require_once($CFG->libdir . '/behat/lib.php');
+require_once($CFG->libdir . '/../config.php');
 
 if (isloggedin()) {
-    $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
-} else {
-    $navdraweropen = false;
-}
-$extraclasses = [];
-if ($navdraweropen) {
-    $extraclasses[] = 'drawer-open-left';
-}
-$result = $DB->get_records_sql('SELECT * FROM {logstore_standard_log} WHERE id < ?', array(15));
-$result= new ArrayIterator($result);
-$bodyattributes = $OUTPUT->body_attributes($extraclasses);
-$blockshtml = $OUTPUT->blocks('side-pre');
-$hasblocks = strpos($blockshtml, 'data-block=') !== false;
-$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
-$templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT,
-    'sidepreblocks' => $blockshtml,
-    'hasblocks' => $hasblocks,
-    'bodyattributes' => $bodyattributes,
-    'navdraweropen' => $navdraweropen,
-    'regionmainsettingsmenu' => $regionmainsettingsmenu,
-    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'noticias' => $result
-];
+	user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
+	require_once($CFG->libdir . '/behat/lib.php');
 
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
-echo $OUTPUT->render_from_template('theme_escola_modelo/frontpage', $templatecontext);
+  $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
+	$extraclasses = [];
+	if ($navdraweropen) {
+	    $extraclasses[] = 'drawer-open-left';
+	}
+//$bodyattributes = $OUTPUT->body_attributes($extraclasses);
+	$blockshtml = $OUTPUT->blocks('side-pre');
+	$hasblocks = strpos($blockshtml, 'data-block=') !== false;
+	$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 
+  //$user_picture = false;
+  //if ($user->picture) {
+    //$user_picture = get_file_url($USER->id.'/'.$size['large'].'.jpg', null, 'user');
+  //}
+  global $USER,$PAGE;
+  $user_picture=new user_picture($USER);
+  $user_picture_url=$user_picture->get_url($PAGE);
+  $user_profile_url=$CFG->wwwroot . "/user/profile.php?id=" . $USER->id . "&course=1";
+
+
+// Descobrir quais categorias de curso estão disponíveis para serem exibidas
+// Obter nome, e-mail de contato e demais informações relevantes
+// Obter eventuais notícias para exibição
+// Obter configurações para rodapé (links para outros sites e contatos em redes sociais)
+
+ 	$templatecontext = [
+    	'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+    	'output' => $OUTPUT,
+	    'bodyattributes' => $bodyattributes,
+		'projetos_especiais' => $OUTPUT->image_url('projetos_especiais', 'theme'),
+	    'conheca-senado' => $OUTPUT->image_url('conheca-senado', 'theme'),
+	    'Cursos-on-line-sem-tutor' => $OUTPUT->image_url('Cursos-on-line-sem-tutor', 'theme'),
+	    'Cursos-on-line' => $OUTPUT->image_url('Cursos-on-line', 'theme'),
+	    'formacao_interna' => $OUTPUT->image_url('formacao_interna', 'theme'),
+	    'oficinas-interlegis' => $OUTPUT->image_url('oficinas-interlegis', 'theme'),
+	    'pos-graduacao' => $OUTPUT->image_url('pos-graduacao', 'theme'),
+	    'video-aula' => $OUTPUT->image_url('video-aula', 'theme'),
+	    'fundo-c' => $OUTPUT->image_url('fundo-c', 'theme'),
+	    'icon_ContatoEmail-azul' => $OUTPUT->image_url('icon_ContatoEmail-azul', 'theme'),
+	    'icon_ContatoFone-azul' => $OUTPUT->image_url('icon_ContatoFone-azul', 'theme'),
+	    'logo_saberes_xl' => $OUTPUT->image_url('logo_saberes_xl', 'theme'),
+	    'moodle_url' => $CFG->wwwroot,
+		'casalegislativa_nome' => 'Câmara Municipal de Moodlecity',
+		'casalegislativa_logo' => $OUTPUT->image_url('casalegislativa_logo', 'theme'),
+		'casalegislativa_endereco' => 'Endereço da Casa Legislativa',
+		'link_facebook' => 'https://www.facebook.com.br',
+		'link_twitter' => 'https://www.twitter.com.br',
+		'link_youtube' => 'https://www.youtube.com.br',
+		'evl_logo' => $OUTPUT->image_url('logo_evl', 'theme'),
+		'evl_url' => 'https://evl.interlegis.leg.br'
+	];
+	
+
+	
+	echo $OUTPUT->render_from_template('theme_escola_modelo/frontpage', $templatecontext);
+}

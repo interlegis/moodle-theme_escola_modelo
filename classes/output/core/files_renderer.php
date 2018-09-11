@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace theme_escola_modelo\output\core;
+namespace theme_boost\output\core;
 
 use plugin_renderer_base;
 
@@ -24,14 +24,14 @@ require_once($CFG->dirroot . '/files/renderer.php');
 
 /**
  * Rendering of files viewer related widgets.
- * @package   theme_escola_modelo
+ * @package   theme_boost
  * @copyright 2016 Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Rendering of files viewer related widgets.
- * @package   theme_escola_modelo
+ * @package   theme_boost
  * @copyright 2016 Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
