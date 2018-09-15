@@ -79,7 +79,11 @@ if (isloggedin()) {
 		'link_twitter' => 'https://www.twitter.com.br',
 		'link_youtube' => 'https://www.youtube.com.br',
 		'evl_logo' => $OUTPUT->image_url('logo_evl', 'theme'),
-		'evl_url' => 'https://evl.interlegis.leg.br'
+		'evl_url' => 'https://evl.interlegis.leg.br',
+        'facebook_logo' => $OUTPUT->image_url('facebook_logo', 'theme'),
+        'twitter_logo' => $OUTPUT->image_url('twitter_logo', 'theme'),
+        'youtube_logo' => $OUTPUT->image_url('youtube_logo', 'theme'),
+        'flickr_logo' => $OUTPUT->image_url('flickr_logo', 'theme')
 	];
 	
 
