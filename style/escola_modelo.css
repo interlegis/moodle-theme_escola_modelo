@@ -462,11 +462,67 @@ a:hover {
     text-decoration: none !important;
     color: ghostwhite;
 }
-
 .textBasicOrientation{
     text-align: center;
     vertical-align: middle;
 }
 .titleHeight{
     height: 200px !important;
+}
+.propriedadesInput{
+    background-color: ghostwhite !important;
+    border-radius: 15px 50px !important;
+}
+.tamanhoInput{
+    width: 30% !important;
+
+}
+.single-icon > i {
+    font-size: 36px;
+    color: #fb397d;
+}
+
+.single-special > h4 {
+    font-size: 22px;
+    color: #5b32b4;
+}
+
+.single-icon {
+    margin-bottom: 25px;
+}
+
+.single-special > h4 {
+    font-size: 22px;
+    color: #5b32b4;
+    margin-bottom: 15px;
+}
+
+.single-special {
+    border: 1px solid #eff2f6;
+    padding: 40px;
+    border-radius: 40px 40px 40px 0px;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    margin-bottom: 30px;
+}
+
+.special_description_content > h2 {
+    color: #5b32b4;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.single-special:hover {
+    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+}
+
+.single-special p {
+    margin-bottom: 0;
+}
+
+.alinhamentoBody{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
 }
