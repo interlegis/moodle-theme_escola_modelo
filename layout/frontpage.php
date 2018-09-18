@@ -83,7 +83,8 @@ if (isloggedin()) {
         'facebook_logo' => $OUTPUT->image_url('facebook_logo', 'theme'),
         'twitter_logo' => $OUTPUT->image_url('twitter_logo', 'theme'),
         'youtube_logo' => $OUTPUT->image_url('youtube_logo', 'theme'),
-        'flickr_logo' => $OUTPUT->image_url('flickr_logo', 'theme')
+        'flickr_logo' => $OUTPUT->image_url('flickr_logo', 'theme'),
+        'g1_imagem_teste' => $OUTPUT->image_url('g1_imagem_teste', 'theme')
 	];
 	
 

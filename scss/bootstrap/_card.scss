@@ -7,6 +7,9 @@
   display: block;
   margin-bottom: $card-spacer-y;
   background-color: $card-bg;
+  max-height: 200px !important;
+  overflow: hidden !important;
+  max-width: 40% !important;
   // border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
   border: $card-border-width solid $card-border-color;
@@ -28,6 +31,7 @@
 
 .card-text:last-child {
   margin-bottom: 0;
+  max-height: 200px;
 }
 
 // .card-actions {
