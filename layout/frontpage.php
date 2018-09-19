@@ -84,7 +84,15 @@ if (isloggedin()) {
         'twitter_logo' => $OUTPUT->image_url('twitter_logo', 'theme'),
         'youtube_logo' => $OUTPUT->image_url('youtube_logo', 'theme'),
         'flickr_logo' => $OUTPUT->image_url('flickr_logo', 'theme'),
-        'g1_imagem_teste' => $OUTPUT->image_url('g1_imagem_teste', 'theme')
+        '1_imagem_card' => $OUTPUT->image_url('1_imagem_card', 'theme'),
+        '2_imagem_card' => $OUTPUT->image_url('2_imagem_card', 'theme'),
+        '3_imagem_card' => $OUTPUT->image_url('3_imagem_card', 'theme'),
+        '4_imagem_card' => $OUTPUT->image_url('4_imagem_card', 'theme'),
+        '5_imagem_card' => $OUTPUT->image_url('5_imagem_card', 'theme'),
+        '6_imagem_card' => $OUTPUT->image_url('6_imagem_card', 'theme')
+
+
+
 	];
 	
 

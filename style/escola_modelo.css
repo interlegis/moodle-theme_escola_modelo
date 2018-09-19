@@ -607,18 +607,35 @@ a:hover {
 @media screen and
 (min-width: 641px) and
 (max-width: 1020px){
-
     .layoutCardsNews{
-padding-left: 25%;
+        padding-left: 25%;
         padding-right: 25%;
         min-width: 50% !important;
-        max-width: 50% !important;
         max-height: 450px !important;
         min-height: 450px !important;
         margin: 1.67% !important;
+        margin-bottom: 10px !important;
 
     }
+    .layoutTextCard{
+        overflow: hidden !important;
+        max-height: 140px !important;
+    }
+}
 
+@media screen and
+(min-width: 641px) and
+(max-width: 1023px){
+
+    .layoutCardsNews{
+        padding-left: 25%;
+        padding-right: 25%;
+        min-width: 100% !important;
+        max-height: 450px !important;
+        min-height: 450px !important;
+        margin: 1.67% !important;
+        margin-bottom: 10px !important;
+    }
     .layoutTextCard{
         overflow: hidden !important;
         max-height: 140px !important;
@@ -637,7 +654,6 @@ padding-left: 25%;
         margin: 1.67% !important;
         padding: 1%;
     }
-
     .layoutTextCard{
         overflow: hidden !important;
         max-height: 160px !important;
@@ -646,4 +662,34 @@ padding-left: 25%;
 
 .gradientBackgroundTitle{
     background-image: linear-gradient(#e9ecef, white) !important;
+}
+
+.radiusCard{
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important;
+}
+
+.loginProperties{
+    width: 100% !important;
+}
+
+@media screen and
+(min-width: 1024px) and
+(max-width: 4080px){
+
+    .sizeByScreen {
+        width: 100% !important;
+    }
+}
+
+@media screen and
+(min-width: 641px) and
+(max-width: 1024px){
+
+    .sizeByScreen {
+        margin-left: 15% !important;
+        margin-right: 15% !important;
+        max-width: 70% !important;
+    }
 }

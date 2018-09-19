@@ -42,6 +42,7 @@
 <!-- {{{ output.main_content }}}          -->
 <!-- {{{ output.course_content_footer }}} -->
 {{{ output.doctype }}}
+
 <html {{{ output.htmlattributes }}}>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -62,14 +63,38 @@
     {{>theme_escola_modelo/header}}
 
     <div class='mainContent'>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" onclick="mostrar_itens(this);" id="painelCategorias_1" href="#">Notícias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this); MudarEstado('cursos')" id="cursos_2" href="#">Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this);" id="contato_3" href="#">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this);" id="social_4" href="#">Social</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this);" id="institucional_5" href="#">Institucional</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this);" id="blog_6" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this);" id="ead_7" href="#">Educação a Distância</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="mostrar_itens(this);" id="faleComSenado_8" href="#">Fale com o Senado</a>
+            </li>
+        </ul>
 
         <div class="gradientBackgroundTitle jumbotron">
             <h1 class="display-4 textBasicOrientation">{{{casalegislativa_nome}}}</h1>
             <hr class="my-4">
             <p class="textBasicOrientation">Escola de Governo</p>
         </div>
-
-
 {{!
      <div class='painelLogin'>
         <div class="potentialidplist">
@@ -83,30 +108,21 @@
     </div>
 }}
         <div class="row alinhamentoBody" id="painelCategorias">
-
-            <div class="card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{g1_imagem_teste}}}" alt="Card image cap">
-
+            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                <img class="card-img-top tamanhoImagemCardNews" src="{{{1_imagem_card}}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                         <p class="card-text layoutTextCard">Some quick example text to build on the card title and make up the bulk of the card's content.
                             Some quick example text to build on the card title and make up the bulk of the card's content.
                             Some quick example text to build on the card title and make up the bulk of the card's content.
-
                         </p>
                 </div>
                 <div>
                     <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">Ler Noticia</a>
                 </div>
             </div>
-
-
-
-
-
-            <div class="card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{g1_imagem_teste}}}" alt="Card image cap">
+            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                <img class="card-img-top tamanhoImagemCardNews" src="{{{2_imagem_card}}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -114,9 +130,8 @@
                     <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">Ler Noticia</a>
                 </div>
             </div>
-
-            <div class="card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{g1_imagem_teste}}}" alt="Card image cap">
+            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                <img class="card-img-top tamanhoImagemCardNews" src="{{{3_imagem_card}}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text layoutTextCard">Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -138,9 +153,8 @@
                     <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">Ler Noticia</a>
                 </div>
             </div>
-
-            <div class="card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{g1_imagem_teste}}}" alt="Card image cap">
+            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                <img class="card-img-top tamanhoImagemCardNews" src="{{{4_imagem_card}}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text layoutTextCard">Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -151,9 +165,8 @@
                     <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">Ler Noticia</a>
                 </div>
             </div>
-
-            <div class="card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{g1_imagem_teste}}}" alt="Card image cap">
+            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                <img class="card-img-top tamanhoImagemCardNews" src="{{{5_imagem_card}}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text layoutTextCard">Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -162,9 +175,8 @@
                     <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">Ler Noticia</a>
                 </div>
             </div>
-
-            <div class="card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{g1_imagem_teste}}}" alt="Card image cap">
+            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                <img class="card-img-top tamanhoImagemCardNews" src="{{{6_imagem_card}}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text layoutTextCard">Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -176,61 +188,16 @@
                         Some quick example text to build on the card title and make up the bulk of the card's content.
                         Some quick example text to build on the card title and make up the bulk of the card's content.
                         Some quick example text to build on the card title and make up the bulk of the card's content.
-
                     </p>
-
                 </div>
                 <div>
                     <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">Ler Noticia</a>
                 </div>
             </div>
-
         </div>
-
-
-
-
-
-
-
-
-
-    <div class="row alinhamentoBody" id="painelCategorias">
-        <!-- Single Special Area -->
-        <div class="col-12 col-md-4">
-            <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <div class="single-icon">
-                    <i class="ti-mobile" aria-hidden="true"></i>
-                </div>
-                <a href="course/index.php?categoryid=134"><img src="{{{projetos_especiais}}}"></a>
-                <p>Cursos on-line sem tutoria</p>
-            </div>
-        </div>
-        <!-- Single Special Area -->
-        <div class="col-12 col-md-4">
-            <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.4s">
-                <div class="single-icon">
-                    <i class="ti-ruler-pencil" aria-hidden="true"></i>
-                </div>
-                <a href="course/index.php?categoryid=134"><img src="{{{projetos_especiais}}}"></a>
-                <p>Cursos on-line sem tutoria</p>
-            </div>
-        </div>
-        <!-- Single Special Area -->
-        <div class="col-12 col-md-4">
-            <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.6s">
-                <div class="single-icon">
-                    <i class="ti-settings" aria-hidden="true"></i>
-                </div>
-                <a href="course/index.php?categoryid=134"><img src="{{{projetos_especiais}}}"></a>
-                <p>Cursos on-line sem tutoria</p>
-            </div>
-        </div>
-    </div>
-
-        <div class="row alinhamentoBody" id="painelCategorias">
-            <!-- Single Special Area -->
-            <div class="col-12 col-md-4">
+    <div id="cursos" style="display:none">
+        <div class="row alinhamentoBody">
+            <div class="col-12 col-md-4 sizeByScreen">
                 <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
                     <div class="single-icon">
                         <i class="ti-mobile" aria-hidden="true"></i>
@@ -239,8 +206,7 @@
                     <p>Cursos on-line sem tutoria</p>
                 </div>
             </div>
-            <!-- Single Special Area -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 sizeByScreen">
                 <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.4s">
                     <div class="single-icon">
                         <i class="ti-ruler-pencil" aria-hidden="true"></i>
@@ -249,8 +215,7 @@
                     <p>Cursos on-line sem tutoria</p>
                 </div>
             </div>
-            <!-- Single Special Area -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 sizeByScreen">
                 <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.6s">
                     <div class="single-icon">
                         <i class="ti-settings" aria-hidden="true"></i>
@@ -261,13 +226,90 @@
             </div>
         </div>
 
+            <div class="row alinhamentoBody">
+                <div class="col-12 col-md-4 sizeByScreen">
+                    <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="single-icon">
+                            <i class="ti-mobile" aria-hidden="true"></i>
+                        </div>
+                        <a href="course/index.php?categoryid=134"><img src="{{{projetos_especiais}}}"></a>
+                        <p>Cursos on-line sem tutoria</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 sizeByScreen">
+                    <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="single-icon">
+                            <i class="ti-ruler-pencil" aria-hidden="true"></i>
+                        </div>
+                        <a href="course/index.php?categoryid=134"><img src="{{{projetos_especiais}}}"></a>
+                        <p>Cursos on-line sem tutoria</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 sizeByScreen">
+                    <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="single-icon">
+                            <i class="ti-settings" aria-hidden="true"></i>
+                        </div>
+                        <a href="course/index.php?categoryid=134"><img src="{{{projetos_especiais}}}"></a>
+                        <p>Cursos on-line sem tutoria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
     {{>theme_escola_modelo/footer}}
 </body>
 </html>
 
+<script>
+    function mostrar_itens(obj) {
+
+        document.getElementById('painelCategorias').hidden="none";
+        document.getElementById('cursos').hidden="true";
+
+        switch (obj.id) {
+            case 'painelCategorias_1':
+                document.getElementById('painelCategorias').hidden = false;
+                document.getElementById('cursos').hidden = true;
+                break;
+            case 'cursos_2':
+                document.getElementById('cursos').hidden = false;
+                document.getElementById('painelCategorias').hidden = true;
+                break;
+            case 'contato_3':
+                document.getElementById('cursos').hidden = true;
+                document.getElementById('painelCategorias').hidden = true;
+                break;
+            case 'social_4':
+                document.getElementById('cursos').hidden = true;
+                document.getElementById('painelCategorias').hidden = true;
+                break;
+            case 'institucional_5':
+                document.getElementById('cursos').hidden = true;
+                document.getElementById('painelCategorias').hidden = true;
+                break;
+            case 'blog_6':
+                document.getElementById('cursos').hidden = true;
+                document.getElementById('painelCategorias').hidden = true;
+                break;
+            case 'ead_7':
+                document.getElementById('cursos').hidden = true;
+                document.getElementById('painelCategorias').hidden = true;
+                break;
+            case 'faleComSenado_8':
+                document.getElementById('cursos').hidden = true;
+                document.getElementById('painelCategorias').hidden = true;
+                break
+
+        }
+    }
+
+    function MudarEstado(el) {
+        var display = document.getElementById(el).style.display;
+        if (display == "none")
+            document.getElementById(el).style.display = 'block';
+    }
+</script>
 {{#js}}
 require(['theme_boost/loader']);
 {{/js}}
