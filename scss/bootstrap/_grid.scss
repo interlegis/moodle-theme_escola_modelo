@@ -15,7 +15,7 @@
 // width for fluid, full width layouts.
 
 @if $enable-grid-classes {
-  .container-fluid {
+  .container-fluid {    
     @include make-container();
   }
 }

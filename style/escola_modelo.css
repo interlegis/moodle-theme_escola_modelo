@@ -541,7 +541,6 @@ a:hover {
 
 #lab_social_icon_footer .social {
     -webkit-transform: scale(0.8);
-    /* Browser Variations: */
 
     -moz-transform: scale(0.8);
     -o-transform: scale(0.8);
@@ -549,9 +548,6 @@ a:hover {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
 }
-/*
-    Multicoloured Hover Variations
-*/
 
 #lab_social_icon_footer #social-fb:hover {
     color: #3B5998;
@@ -569,19 +565,12 @@ a:hover {
     color: #f39c12;
 }
 
-
 .marginTopSocial{
     margin-top: 5%;
 }
 .colorTitleBar{
     color: white !important;
     font-weight: bold !important;
-}
-
-.tamanhoImagemCardNews{
-    max-height: 100% !important;
-    min-width: 100% !important;
-    min-height: 100% !important;
 }
 
 .alinhamentoBotaoLerLoticia{
@@ -600,13 +589,6 @@ a:hover {
 @media screen and
 (min-width: 200px) and
 (max-width: 640px){
-
-
-}
-
-@media screen and
-(min-width: 641px) and
-(max-width: 1020px){
     .layoutCardsNews{
         padding-left: 25%;
         padding-right: 25%;
@@ -621,7 +603,16 @@ a:hover {
         overflow: hidden !important;
         max-height: 140px !important;
     }
+    .tamanhoImagemCardNews{
+        min-width: 100% !important;
+        height: 100px !important;
+    }
+    .responsividade{
+        width: 100% !important;
+    }
+
 }
+
 
 @media screen and
 (min-width: 641px) and
@@ -640,6 +631,13 @@ a:hover {
         overflow: hidden !important;
         max-height: 140px !important;
     }
+    .tamanhoImagemCardNews{
+        height: 170px !important;
+        min-width: 100% !important;
+    }
+    .footerWidth{
+        width: 100% !important;
+    }
 }
 
 @media screen and
@@ -657,6 +655,10 @@ a:hover {
     .layoutTextCard{
         overflow: hidden !important;
         max-height: 160px !important;
+    }
+    .tamanhoImagemCardNews{
+        min-width: 100% !important;
+        height: 120px !important;
     }
 }
 
