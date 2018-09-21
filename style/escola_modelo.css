@@ -413,24 +413,12 @@ width:34.1875px;
  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 }
 
-.largura10{
-    width: 10% !important;
-}
-
-.largura80{
-    width: 80% !important;
-}
 .largura100{
     width: 100% !important;
 }
 .largura33{
     width: 33% !important;
 }
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
-
 .NavGlobal-middle{
     color: #fff;
     text-align: center;
@@ -456,14 +444,6 @@ a:hover {
 }
 .titleHeight{
     height: 200px !important;
-}
-.propriedadesInput{
-    background-color: ghostwhite !important;
-    border-radius: 15px 50px !important;
-}
-.tamanhoInput{
-    width: 30% !important;
-
 }
 .single-icon > i {
     font-size: 36px;
@@ -519,10 +499,7 @@ a:hover {
 .corTextoDefault{
     color: grey;
 }
-.corTitleDefault{
-    color:grey;
-    font-weight: bold;
-}
+
 #lab_social_icon_footer {
     text-align: center;
     vertical-align: middle;
@@ -568,6 +545,7 @@ a:hover {
 .marginTopSocial{
     margin-top: 5%;
 }
+
 .colorTitleBar{
     color: white !important;
     font-weight: bold !important;
@@ -597,11 +575,11 @@ a:hover {
         min-height: 450px !important;
         margin: 1.67% !important;
         margin-bottom: 10px !important;
-
     }
     .layoutTextCard{
         overflow: hidden !important;
         max-height: 140px !important;
+        text-align: justify;
     }
     .tamanhoImagemCardNews{
         min-width: 100% !important;
@@ -610,14 +588,12 @@ a:hover {
     .responsividade{
         width: 100% !important;
     }
-
 }
 
 
 @media screen and
 (min-width: 641px) and
 (max-width: 1023px){
-
     .layoutCardsNews{
         padding-left: 25%;
         padding-right: 25%;
@@ -630,6 +606,7 @@ a:hover {
     .layoutTextCard{
         overflow: hidden !important;
         max-height: 140px !important;
+        text-align: justify !important;
     }
     .tamanhoImagemCardNews{
         height: 170px !important;
@@ -643,7 +620,6 @@ a:hover {
 @media screen and
 (min-width: 1024px) and
 (max-width: 4080px){
-
     .layoutCardsNews{
         min-width: 45% !important;
         max-width: 45% !important;
@@ -655,6 +631,7 @@ a:hover {
     .layoutTextCard{
         overflow: hidden !important;
         max-height: 160px !important;
+        text-align: justify !important;
     }
     .tamanhoImagemCardNews{
         min-width: 100% !important;
@@ -672,14 +649,9 @@ a:hover {
     border-radius: 20px !important;
 }
 
-.loginProperties{
-    width: 100% !important;
-}
-
 @media screen and
 (min-width: 1024px) and
 (max-width: 4080px){
-
     .sizeByScreen {
         width: 100% !important;
     }
@@ -688,7 +660,6 @@ a:hover {
 @media screen and
 (min-width: 641px) and
 (max-width: 1024px){
-
     .sizeByScreen {
         margin-left: 15% !important;
         margin-right: 15% !important;
