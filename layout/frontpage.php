@@ -89,7 +89,8 @@ if (isloggedin()) {
         '3_imagem_card' => $OUTPUT->image_url('3_imagem_card', 'theme'),
         '4_imagem_card' => $OUTPUT->image_url('4_imagem_card', 'theme'),
         '5_imagem_card' => $OUTPUT->image_url('5_imagem_card', 'theme'),
-        '6_imagem_card' => $OUTPUT->image_url('6_imagem_card', 'theme')
+        '6_imagem_card' => $OUTPUT->image_url('6_imagem_card', 'theme'),
+        'output.favicon' => $OUTPUT->image_url('favicon', 'theme')
 
 
 

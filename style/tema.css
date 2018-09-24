@@ -217,6 +217,7 @@ p.busca-avancada a {
 .carousel-indicators {
   top: 10px;
   height: 10px;
+    background-color: grey;
 }
 .carousel-control {
   cursor: alias;

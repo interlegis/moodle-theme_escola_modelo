@@ -615,6 +615,11 @@ a:hover {
     .footerWidth{
         width: 100% !important;
     }
+    .sizeByScreen {
+        margin-left: 15% !important;
+        margin-right: 15% !important;
+        max-width: 70% !important;
+    }
 }
 
 @media screen and
@@ -637,6 +642,9 @@ a:hover {
         min-width: 100% !important;
         height: 120px !important;
     }
+    .sizeByScreen {
+        width: 100% !important;
+    }
 }
 
 .gradientBackgroundTitle{
@@ -649,20 +657,10 @@ a:hover {
     border-radius: 20px !important;
 }
 
-@media screen and
-(min-width: 1024px) and
-(max-width: 4080px){
-    .sizeByScreen {
-        width: 100% !important;
-    }
+.noBackgroundCarrousel{
+    background-image: none !important;
 }
 
-@media screen and
-(min-width: 641px) and
-(max-width: 1024px){
-    .sizeByScreen {
-        margin-left: 15% !important;
-        margin-right: 15% !important;
-        max-width: 70% !important;
-    }
+.teste{
+    background-color: dimgrey !important;
 }

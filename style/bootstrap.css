@@ -5998,6 +5998,7 @@ button.close {
   margin-right: 15%;
   margin-left: 15%;
   list-style: none;
+  width: 100%;
 }
 
 .carousel-indicators li {
@@ -6034,7 +6035,7 @@ button.close {
 }
 
 .carousel-indicators .active {
-  background-color: #fff;
+  background-color: grey;
 }
 
 .carousel-caption {
