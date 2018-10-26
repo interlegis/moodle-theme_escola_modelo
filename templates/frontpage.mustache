@@ -62,6 +62,18 @@
 
 {{>theme_escola_modelo/header}}
 
+{{#cursos_evl}}
+  <ul>
+  {{#cursos}}
+    <li>
+    {{#.}}
+        <b>{{id}}</b> - {{nome}}
+    {{/.}}
+    </li>
+  {{/cursos}}
+  </ul>
+{{/cursos_evl}}
+
 <div class='mainContent'>
     <ul class="nav nav-tabs">
         <li class="nav-item">

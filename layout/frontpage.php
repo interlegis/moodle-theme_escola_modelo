@@ -26,6 +26,8 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/../config.php');
 
+include($CFG->libdir .'/httpful.phar');
+
 if (isloggedin()) {
 	user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 	require_once($CFG->libdir . '/behat/lib.php');
@@ -49,6 +51,16 @@ if (isloggedin()) {
   $user_picture_url=$user_picture->get_url($PAGE);
   $user_profile_url=$CFG->wwwroot . "/user/profile.php?id=" . $USER->id . "&course=1";
 
+  $uri = 'https://escolamodelows.interlegis.leg.br/api/v1/cursos';
+  $response = \Httpful\Request::get($uri)
+	  ->expectsJson()
+	  //->body($json)
+	  ->send();
+//var obj = JSON.parse($response->data);
+//var data = '{cursos: obj.prop['cursos'].map(function(x){ return {name: x}; })}';
+  
+  //echo 'Tem erro: ' . $response->code;
+  //echo $response;
 
 // Descobrir quais categorias de curso estão disponíveis para serem exibidas
 // Obter nome, e-mail de contato e demais informações relevantes
@@ -90,8 +102,8 @@ if (isloggedin()) {
         '4_imagem_card' => $OUTPUT->image_url('4_imagem_card', 'theme'),
         '5_imagem_card' => $OUTPUT->image_url('5_imagem_card', 'theme'),
         '6_imagem_card' => $OUTPUT->image_url('6_imagem_card', 'theme'),
-        'output.favicon' => $OUTPUT->image_url('favicon', 'theme')
-
+        'output.favicon' => $OUTPUT->image_url('favicon', 'theme'),
+		'cursos_evl' => $response->body
 
 
 	];
