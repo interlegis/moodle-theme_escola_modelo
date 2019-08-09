@@ -1,0 +1,162 @@
+
+@media screen and
+(min-width: 200px) and
+(max-width: 765px){
+    .course-card-view {
+        min-width: calc(100% - 0.5rem) !important;
+        max-width: calc(100% - 0.5rem) !important;
+    }
+    .popover {
+        max-width: 100% !important;
+        width: 95% !important;
+    }
+}
+
+@media screen and
+(min-width: 766px) and
+(max-width: 986px){
+    .course-card-view {
+        min-width: calc(50% - 0.5rem) !important;
+        max-width: calc(50% - 0.5rem) !important;
+    }
+    .popover {
+        max-width: 100% !important;
+        width: 80% !important;
+    }
+}
+
+
+@media screen and
+(min-width: 987px) and
+(max-width: 1250px){
+    .course-card-view {
+        min-width: calc(33% - 0.5rem) !important;
+        max-width: calc(33% - 0.5rem) !important;
+    }
+    .popover {
+        max-width: 100% !important;
+        width: 80% !important;
+    }
+
+}
+
+@media screen and
+(min-width: 1251px) and
+(max-width: 4080px){
+    .popover {
+        max-width: 100% !important;
+        width: 60% !important;
+    }
+
+}
+.course-card-view {
+    box-shadow: 5px 5px 9px -4px rgba($black, .1);
+    padding-bottom: 4rem;
+    min-width: calc(25% - 0.5rem);
+    max-width: calc(25% - 0.5rem);
+
+    .course-card-img div {
+        height: 6.5rem;
+        background-position: top right;
+        background-size: cover;
+    }
+
+    .card-see-more {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .btn {
+            width: 90%;
+        }
+    }
+}
+
+body#page-enrol-index {
+    .box.generalbox > div {
+        @extend .course-card-view;
+        position: relative;
+    }
+}
+
+
+
+.minheight{
+    background-position: top center !important;
+}
+
+.boxCursos {
+    transition: box-shadow .3s;
+    border: 1px solid #ccc;
+    float: left;
+    background: #fff; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #011c35 1%, #E0E0E0 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#fff), color-stop(100%,#E0E0E0)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #fff 1%,#E0E0E0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #fff 1%,#E0E0E0 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #fff 1%,#E0E0E0 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #fff 1%,#E0E0E0 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0264d6', endColorstr='#1c2b5a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.tamanhoBoxCursos{
+    max-height: 440px;
+}
+.boxCursos:hover {
+    -webkit-box-shadow: 0px 0px 14px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 14px -2px rgba(0,0,0,1);
+    box-shadow: 0px 0px 14px -2px rgba(0,0,0,1);
+}
+
+.btn-mais-info{
+    color: white;
+    background-color: #0069d9;
+    border-color: #0069d9;
+    border-radius: 5px;
+}
+
+.btn-mais-info:hover{
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.58);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.58);
+}
+
+.textCardEdited {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #444444;
+}
+.elegantshd {
+    color: #131313;
+    letter-spacing: .15em;
+}
+
+.propertiesTextColor{
+    color:#303030;
+
+}
+.propertiesTextColor:hover{
+    color:#787878 !important;
+    text-decoration: none !important;
+}
+
+.btn-inscrever{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-inscrever:hover{
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.58);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.58);
+}
+
+.card-body{
+    margin-bottom: 10px;
+}

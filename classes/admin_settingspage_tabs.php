@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package   theme_boost
+ * @package   theme_escola_modelo
  * @copyright 2016 Ryan Wyllie
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -23,11 +23,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * @package   theme_boost
+ * @package   theme_escola_modelo
  * @copyright 2016 Ryan Wyllie
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class theme_boost_admin_settingspage_tabs extends admin_settingpage {
+class theme_escola_modelo_admin_settingspage_tabs extends admin_settingpage {
 
     /** @var The tabs */
     protected $tabs = array();
@@ -93,7 +93,7 @@ class theme_boost_admin_settingspage_tabs extends admin_settingpage {
             return '';
         }
 
-        return $OUTPUT->render_from_template('theme_boost/admin_setting_tabs', $context);
+        return $OUTPUT->render_from_template('theme_escola_modelo/admin_setting_tabs', $context);
     }
 
 }

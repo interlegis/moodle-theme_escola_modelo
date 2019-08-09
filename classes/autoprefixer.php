@@ -18,15 +18,15 @@
  * Autoprefixer.
  *
  * This autoprefixer has been developed to satisfy the basic needs of the
- * theme Boost when working with Bootstrap 4 alpha. We do not recommend
+ * theme Ilb when working with Bootstrap 4 alpha. We do not recommend
  * that this tool is shared, nor used outside of this theme.
  *
- * @package    theme_boost
+ * @package    theme_escola_modelo
  * @copyright  2016 Frédéric Massart - FMCorz.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_boost;
+namespace theme_escola_modelo;
 defined('MOODLE_INTERNAL') || die();
 
 use Sabberworm\CSS\CSSList\CSSList;
@@ -54,7 +54,7 @@ use Sabberworm\CSS\Value\ValueList;
  *
  * Very basic implementation covering simple needs for Bootstrap 4.
  *
- * @package    theme_boost
+ * @package    theme_escola_modelo
  * @copyright  2016 Frédéric Massart - FMCorz.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

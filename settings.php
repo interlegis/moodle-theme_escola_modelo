@@ -23,8 +23,68 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
-    $settings = new theme_boost_admin_settingspage_tabs('themesettingescola_modelo', get_string('configtitle', 'theme_escola_modelo'));
+    $settings = new theme_escola_modelo_admin_settingspage_tabs('themesettingescola_modelo', get_string('configtitle', 'theme_escola_modelo'));
     $page = new admin_settingpage('theme_escola_modelo_general', get_string('generalsettings', 'theme_escola_modelo'));
+
+    // Background image setting.
+    $name = 'theme_escola_modelo/backgroundimage';
+    $title = get_string('backgroundimage', 'theme_escola_modelo');
+    $description = get_string('backgroundimage_desc', 'theme_escola_modelo');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'backgroundimage');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Indicador de mensagem de aviso
+
+    // Texto da mensagem de aviso
+
+    // Mensagem de boas vindas
+    $name = 'theme_escola_modelo/welcome';
+    $title = get_string('welcome', 'theme_escola_modelo');
+    $description = get_string('welcome_desc', 'theme_escola_modelo');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, 'welcome');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Cabeçalho principal
+    $name = 'theme_escola_modelo/header';
+    $title = get_string('header', 'theme_escola_modelo');
+    $description = get_string('header_desc', 'theme_escola_modelo');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, 'header');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Rodapé principal
+    $name = 'theme_escola_modelo/footer';
+    $title = get_string('footer', 'theme_escola_modelo');
+    $description = get_string('footer_desc', 'theme_escola_modelo');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, 'footer');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Rodapé simples
+    $name = 'theme_escola_modelo/footersimple';
+    $title = get_string('footersimple', 'theme_escola_modelo');
+    $description = get_string('footersimple_desc', 'theme_escola_modelo');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, 'footersimple');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Cursos em destaque
+    
+/*    admin_setting_configtext - The most flexible setting, the user enters text.
+    admin_setting_configtextarea - General text area without html editor. Useful for things like raw CSS
+    admin_setting_confightmleditor - A full html editor using the systems default text editor. Good for editing HTML
+    admin_setting_configpasswordunmask - Works like a password field - but isn't one. Good for shared secrets etc
+    admin_setting_configfile - Good for listing a file stored on the server. Does not allow uploading files
+    admin_setting_configexecutable - More specific version of admin_setting_configfile. The file is checked to make sure it can be executed by the webserver
+    admin_setting_configcheckbox - Are you cool [ ]
+    admin_setting_configselect - Choose from a list of values
+    admin_setting_configstoredfile - Allow uploading of files and storing in moodle file storage
+    admin_setting_configcolourpicker - Interactive colour picker
+*/
+
+/*
 
     // Preset.
     $name = 'theme_escola_modelo/preset';
@@ -40,7 +100,7 @@ if ($ADMIN->fulltree) {
     foreach ($files as $file) {
         $choices[$file->get_filename()] = $file->get_filename();
     }
-    // These are the built in presets from BOost.
+    // These are the built in presets.
     $choices['default.scss'] = 'default.scss';
     $choices['plain.scss'] = 'plain.scss';
 
@@ -57,17 +117,7 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
-// INICIO EDU
-    // Background image setting.
-    $name = 'theme_escola_modelo/backgroundimage';
-    $title = get_string('backgroundimage', 'theme_escola_modelo');
-    $description = get_string('backgroundimage_desc', 'theme_escola_modelo');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'backgroundimage');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-// FIM EDU
-
-    // Variable $brand-color.
+    // Variable $body-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_escola_modelo/brandcolor';
     $title = get_string('brandcolor', 'theme_escola_modelo');
@@ -83,16 +133,18 @@ if ($ADMIN->fulltree) {
     $page = new admin_settingpage('theme_escola_modelo_advanced', get_string('advancedsettings', 'theme_escola_modelo'));
 
     // Raw SCSS to include before the content.
-    $setting = new admin_setting_configtextarea('theme_escola_modelo/scsspre',
+    $setting = new admin_setting_scsscode('theme_escola_modelo/scsspre',
         get_string('rawscsspre', 'theme_escola_modelo'), get_string('rawscsspre_desc', 'theme_escola_modelo'), '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Raw SCSS to include after the content.
-    $setting = new admin_setting_configtextarea('theme_escola_modelo/scss', get_string('rawscss', 'theme_escola_modelo'),
+    $setting = new admin_setting_scsscode('theme_escola_modelo/scss', get_string('rawscss', 'theme_escola_modelo'),
         get_string('rawscss_desc', 'theme_escola_modelo'), '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+*/
+
 
     $settings->add($page);
 }

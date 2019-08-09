@@ -26,7 +26,8 @@ defined('MOODLE_INTERNAL') || die();
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT
+    'output' => $OUTPUT,
+    'moodle_url' => "$CFG->wwwroot"
 ];
 
 echo $OUTPUT->render_from_template('theme_escola_modelo/embedded', $templatecontext);

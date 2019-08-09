@@ -1,20 +1,7 @@
 <?php
-// Every file should have GPL and copyright in the header - we skip it in tutorials but you should not skip it for real.
- 
-// This line protects the file from being accessed by a URL directly.                                                               
-defined('MOODLE_INTERNAL') || die();                                                                                                
- 
-// This is the version of the plugin.                                                                                               
-$plugin->version = '2018091000';
 
-// This is the version of Moodle this plugin requires.                                                                              
-$plugin->requires = '2017110800';                                                                                                   
- 
-// This is the component name of the plugin - it always starts with 'theme_'                                                        
-// for themes and should be the same as the name of the folder.                                                                     
-$plugin->component = 'theme_escola_modelo';                                                                                                 
- 
-// This is a list of plugins, this plugin depends on (and their versions).                                                          
-$plugin->dependencies = [                                                                                                           
-    'theme_boost' => '2017111300'                                                                                                   
-];
+defined('MOODLE_INTERNAL') || die();
+
+$plugin->version   = 2019072604;
+$plugin->requires  = 2018112800;
+$plugin->component = 'theme_escola_modelo';

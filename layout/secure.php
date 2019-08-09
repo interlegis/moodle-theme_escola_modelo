@@ -33,7 +33,8 @@ $templatecontext = [
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'sidepreblocks' => $blockshtml,
-    'hasblocks' => $hasblocks
+    'hasblocks' => $hasblocks,
+    'moodle_url' => "$CFG->wwwroot"
 ];
 
 echo $OUTPUT->render_from_template('theme_escola_modelo/secure', $templatecontext);

@@ -17,7 +17,7 @@
 {{!
     @template theme_escola_modelo/maintenance
 
-    Escola_modelo maintenance layout template.
+    escola_modelo maintenance layout template.
 
     Context variables required for this template:
     * output - The core renderer for the page
@@ -47,29 +47,28 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    <div id="page" class="container card card-block">
+    <div id="page" class="container pb-3">
 
         <div class="row">
-            <div class="col-xs-12 p-y-1">
+            <div class="col-12 py-3">
                 {{{ output.page_heading }}}
             </div>
         </div>
 
         <div id="page-content" class="row">
-            <section id="region-main" class="col-xs-12">
+            <section id="region-main" class="col-12">
                 {{{ output.main_content }}}
             </section>
         </div>
 
     </div>
+    <footer id="page-footer" class="py-3 bg-dark text-light">
+        <div class="container">
+            {{{ output.standard_footer_html }}}
+            {{{ output.standard_end_of_body_html }}}
+        </div>
+    </footer>
 </div>
-
-<footer id="page-footer" class="p-y-1 bg-inverse">
-    <div class="container">
-        {{{ output.standard_footer_html }}}
-        {{{ output.standard_end_of_body_html }}}
-    </div>
-</footer>
 
 </body>
 </html>

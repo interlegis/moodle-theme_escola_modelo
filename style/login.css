@@ -1,0 +1,36 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@charset "UTF-8";
+.login-block{ background: #DE6262; background-image: linear-gradient(to bottom, #011c37, #002141, #00274c, #002c57, #003262, #003262, #003262, #003262, #002c57, #00274c, #002141, #011c37); float:left; width:100%; padding : 30px 0; height: 100%;}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.btn-login{background: #DE6262; color:#fff; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:#fff;}
+.logoProperties{max-width: 230px; margin-bottom: 15px; margin-left: auto; margin-right: auto; text-align: center;}
+.textDecorationProperties{text-decoration: none !important; text-transform: capitalize !important; letter-spacing: 2px !important;}
+.colorLoginClear{background-color: #fafafa;}
+.colorLoginDarker{background-color: #ebebeb !important;}
+.card-header{padding: 5px !important;}
+.btn-interlegis{background-color: #00c851!important; color: #fff!important; font-size: .875rem !important;}
+.btn-guest{background-color: #00c851!important; color: #fff!important; font-size: .875rem !important; margin-top: 10px;}
+.btn-interlegis:hover{background-color: #28a745!important;}
+.btn-guest:hover{background-color: #28a745!important;}
+a:hover,a:focus{text-decoration: none;outline: none;}
+#accordionExample .card{border: none;border-radius: 0; box-shadow: none; margin: 0 0 10px;overflow: hidden;position: relative;}
+#accordionExample .card-header{padding: 0;border: none;border-radius: 0; margin-bottom: 10px; z-index: 1; position: relative;}
+#accordionExample .card-header:before, #accordionExample .card-header:after{content: ""; width: 50%; height: 20%; box-shadow: 0 15px 5px rgba(0, 0, 0, 0.4); position: absolute; bottom: 15px; left: 10px; transform: rotate(-3deg); z-index: -1;}
+#accordionExample .card-header:after{left: auto; right: 10px;transform: rotate(3deg);}
+#accordionExample .mb-0 a{display: block; padding: 15px 70px 15px 70px; margin: 0; background: #fff; font-size: 15px;font-weight: 500; letter-spacing: 1px; color: #292F33; border-radius: 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset; position: relative;}
+#accordionExample .mb-0 a:before, #accordionExample .mb-0 a.collapsed:before{content: "\f106"; font-family: "Font Awesome 5 Free"; font-weight: 900; width: 55px; height: 100%; text-align: center; line-height: 50px; border-left: 2px solid #00008B; position: absolute; top: 0; right: 0;}
+#accordionExample .mb-0 a.collapsed:before{ content: "\f107"; }
+#accordionExample .mb-0 a .icon{display: inline-block; width: 55px; height: 100%; border-right: 2px solid #00008B; font-size: 18px; color: rgba(0,0,0,0.7); line-height: 50px; text-align: center; position: absolute; top: 0; left: 0;}
+#accordionExample .card-body{padding: 10px 20px; margin: 0 0 20px; border-bottom: 3px solid #00008B; border-top: none; background: #fff; font-size: 15px; color: #333; line-height: 27px;}
+.divLogoProperties{text-align: center; margin-top: 17px;}
+.boxShadow{box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+.divPoweredBy{height: 17px; background-color: #989898 !important; position: absolute;bottom: 0; width: calc(100% - 30px); border-radius: 5px 5px 0px 0px;-moz-border-radius: 5px 5px 0px 0px;-webkit-border-radius: 5px 5px 0px 0px;border: 0px solid #000000;}
+.poweredBy{font-size: 10px; font-weight: bold; text-transform: capitalize; color: black; text-align: center; bottom: 0;}
+.custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control {background-image: linear-gradient(0deg,#011c37 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
