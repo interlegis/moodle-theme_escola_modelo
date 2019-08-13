@@ -38,12 +38,12 @@ $footer = $this->page->theme->settings->footersimple;
 // 	}
 // }';
 
-$uri = 'https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z';
-$response = \Httpful\Request::get($uri)
-	->expectsJson()
-	//->body($json)
-	->send();
-$destaques_evl = $response->body;
+// $uri = 'https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z';
+// $response = \Httpful\Request::get($uri)
+// 	->expectsJson()
+// 	//->body($json)
+// 	->send();
+$destaques_evl = ''; //$response->body;
 
 //echo $response;
 

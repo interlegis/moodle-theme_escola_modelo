@@ -141,10 +141,12 @@
                 </div>
                 <div id="collapseOne" class="collapse show colorLoginClear" aria-labelledby="headingOne" data-parent="#accordionExample">
                   <div class="card-body">
-                    <button type="button" class="btn btn-interlegis btn-lg btn-block">
-                        <img src="{{iconurl}}" style="width: 16px" id="imgLogin">
-                          Autenticação EVL <!--{{name}} -->
-                    </button>
+                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-interlegis btn-lg btn-block">
+                        {{#iconurl}}
+                            <img src="{{iconurl}}" style="width: 16px" id="imgLogin" alt="" />Autenticação EVL
+                        {{/iconurl}}
+                        <!--{{name}} -->
+                    </a>
                   </div>
                 </div>
               </div>
