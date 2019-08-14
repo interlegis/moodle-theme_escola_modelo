@@ -57,102 +57,258 @@
     <meta name="theme-color" content="#00305c" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>{{{casalegislativa_nome}}}</title>
-    {{>theme_escola_modelo/head}}
+    
+    <link rel="stylesheet" type="text/css" href="{{moodle_url}}/theme/escola_modelo/style/frontpage.css">
+    <script src="{{moodle_url}}/theme/escola_modelo/js/frontpage.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body {{{ bodyattributes }}}>
 
-{{>theme_escola_modelo/header}}
-
-<div class='mainContent'>
-    <div class="gradientBackgroundTitle jumbotron">
-        <h1 class="display-4 textBasicOrientation">
-            {{{casalegislativa_nome}}}
-        </h1>
-        <hr class="my-4">
-        <p class="textBasicOrientation">
-            Escola de Governo
-        </p>
-    </div>
-{{!
-<div class='painelLogin'>
-<div class="potentialidplist">
-<div class="potentialidp">
-    <a href="https://escolamodeloh.interlegis.leg.br/auth/oauth2/login.php?id=1&amp;wantsurl=%2F&amp;sesskey=HtKS7cQU12" title="Escola Modelo WS" class="btn btn-secondary btn-block">
-    <img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" alt="" width="24" height="24">
-    Escola Modelo WS
-    </a>
-</div>
-</div>
-</div>
-}}
-    <div id="myCarousel" class="carousel slide sizeByScreen" data-ride="carousel">
-        <div class="carousel-inner">
-            {{#cursos_evl}}
-            {{#cursos}}
-            <div class="item">
-                <div class="col-12 sizeByScreen">
-                    <div class="single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="textBasicOrientation">
-                            <h5>
-                                {{{nome}}}
-                                <span class="badge badge-secondary">
-                                    New
-                                </span>
-                            </h5>
-                        </div>
-                        <div class="single-icon">
-                            <i class="ti-mobile" aria-hidden="true"></i>
-                        </div>
-                        <a href="course/index.php?categoryid=134">
-                            <img width='200px' height='90px' src="{{{logo}}}">
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark" style="margin-bottom: 0px;">
+        <div class="container">
+            <div class="navbar-translate">
+                <label class="nav-item navbar-brand" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                	<li class="nav-item">
+                        <a href="#news" class="nav-link">
+                            <img src="https://img.icons8.com/dusk/64/000000/news.png" style="width: 20px;">  Comunicados
                         </a>
-                        <p>
-                            {{{nome}}}
-                        </p>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#mostViewed" class="nav-link">
+                            <img src="https://img.icons8.com/dusk/64/000000/best-seller.png" style="width: 20px;"> Mais Procurados
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#courses" class="nav-link">
+                            <img src="https://img.icons8.com/dusk/64/000000/book.png" style="width: 20px;"> Cursos
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="#cover" class="nav-link">
+                        <img src="https://img.icons8.com/dusk/64/000000/search.png" style="width: 20px;"></a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="https://autenticacaoh.interlegis.leg.br/" class="btn btn-rose btn-raised btn-round">
+                            Log In
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bgGradient">  
+	    <div id="particles">
+		    <div id="webcoderskull">
+		        <h1>{{{sitename}}}</h1>
+		        <p class="littleSubtitle">{{{casalegislativa_nome}}}</p>
+		    </div>
+	    </div>
+    <div>
+    
+    <!-- Notícias -->
+
+    <div id="news">
+        <div class="">    
+            <div class="row mb-5 propertiesNews">
+                <div class="col-12 py-4 bg-dark">
+                    <div class="row">
+                        <div style="width: 100%">
+                            <div class="breaking-box">
+                                <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item">
+                                            <a href=""><span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >INTERLEGIS</span></a> <a class="text-white" href="">Interlegis oferece curso gratuito para a população</a>
+                                        </div>
+                                        <div class="carousel-item active">
+                                            <a href=""><span class="position-relative mx-2 badge badge-primary rounded-0 corWarning">MANUTENÇÃO </span></a> <a class="text-white" href=""><img src="https://img.icons8.com/offices/30/000000/under-construction.png" style="width: 20px;"> Manutenção rotineira marcada para dia 32/13/2014</a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation-box p-2 d-none d-sm-block">
+                                        <a class="carousel-control-prev colorNext" href="#carouselbreaking" role="button" data-slide="prev">
+                                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next colorNext" href="#carouselbreaking" role="button" data-slide="next">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-           {{/cursos}}
-           {{/cursos_evl}}
         </div>
-
-        <a class="left carousel-control noBackgroundCarrousel" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control noBackgroundCarrousel" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
 
-    
-    {{#cursos_home}}
-    {{#categorias}}
-    {{#categoria}}
-        <h4>{{{nome}}}</h4>
-        <div class="row alinhamentoBody" id="painelCategorias">
-        {{#cursos}}
-            <div class="radiusCard card layoutCardsNews col-12 col-md-4 single-special textBasicOrientation wow fadeInUp" data-wow-delay="0.2s">
-                <img class="card-img-top tamanhoImagemCardNews" src="{{{3_imagem_card}}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        {{{nome}}}
-                    </h5>
-                    <p class="card-text layoutTextCard">
-                        {{{descricao}}}
-                    </p>
-                    <a href="#" class="btn btn-primary colorTitleBar alinhamentoBotaoLerLoticia">
-                        Matricular
-                    </a>
+    <!-- Cursos mais procurados -->
+
+    <div id="mostViewed">
+		<br>
+		<br>
+		<h2 class="heading-secondary propertiesTitleCenter letterSpacing"> Cursos Mais Procurados</h1>
+  	</div>
+
+    <div class="container cta-100">
+        <div class="container">
+          <div class="row blog">
+            <div class="col-md-12">
+              <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                  <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#blogCarousel" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                        {{#cursos_home}}
+                        {{#categorias}}
+                        {{#categoria}}
+                            <!--<h4>{{{nome}}}</h4>-->
+                            {{#cursos}}
+                            <div class="col-md-4" >
+                                <div class="item-box-blog">
+                                <div class="item-box-blog-image">
+                                    <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">20 de Agosto</span> </div>
+                                    <figure> <img alt="" src="https://saberes.senado.leg.br/pluginfile.php/2273557/course/overviewfiles/Cerimonial%20no%20Ambiente%20Legislativo-min.png"> </figure>
+                                </div>
+                                <div class="item-box-blog-body">
+                                    <div class="item-box-blog-heading">
+                                    <a href="#" tabindex="0">
+                                        <h5>{{{nome}}}</h5>
+                                    </a>
+                                    </div>
+                                    <div class="item-box-blog-data" style="padding: px 15px;">
+                                    <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(3)</p>
+                                    </div>
+                                    <div class="item-box-blog-text">
+                                    <p>{{{descricao}}}</p>
+                                    </div>
+                                    <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Ler Mais</a> </div>
+                                </div>
+                                </div>
+                            </div>
+                            {{/cursos}}
+                        {{/categoria}}
+                        {{/categorias}}
+                        {{/cursos_home}}
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            {{/cursos}}
+          </div>
         </div>
-    {{/categoria}}
-    {{/categorias}}
-    {{/cursos_home}}
-</div>
+    </div>
+
+    <!-- Cursos disponíveis -->
+
+    <section class="section-tours" id="courses">
+        <div class=" text-center  u-margin-bottom-medium" style="margin-bottom: 40px;">
+            <br><br>  
+            <h2 class="heading-secondary letterSpacing">
+                Cursos Disponíveis
+            </h2>
+            <br><br>
+        </div>
+
+        <div id="cover">
+            <form method="get" action="">
+                <div class="tb">
+                    <div class="td"><input type="text" required></div>
+                    <div class="td" id="s-cover">
+                        <button type="submit">
+                        <div id="s-circle"></div>
+                        <span></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="roww">
+            <div class="col-1-of-1">
+                {{#cursos_home}}
+                {{#categorias}}
+                {{#categoria}}
+                    <!--<h4>{{{nome}}}</h4> -->
+                    {{#cursos}}
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">{{{nome}}}</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li><b>Certificador: </b> SBH</li>
+                                        <li><b>Conteudista: </b>ILB</li>
+                                        <li><b>Carga Horária: </b>30h</li>
+                                        <li><div class="star-rating">
+                                            <input type="radio" id="5-stars" name="rating" value="5" />
+                                            <label for="5-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="4-stars" name="rating" value="4" />
+                                            <label for="4-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="3-stars" name="rating" value="3" />
+                                            <label for="3-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="2-stars" name="rating" value="2" />
+                                            <label for="2-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="1-star" name="rating" value="1" />
+                                            <label for="1-star" class="star">&#9733;</label>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2 pos">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <h1 class="h1Properties">{{{nome}}}</h1>
+                                        <p style="text-align: justify;">{{{descricao}}}</p>
+                                        <div class="posBottom">
+                                            <button type="button" class="btn btn-inscrever btn-block">Matricular</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/cursos}}
+                    </div>
+                {{/categoria}}
+                {{/categorias}}
+                {{/cursos_home}}
+            </div>        
+        </div>
+    </section>
+
+    <!--
+    <footer class="footer text-center bg-dark">
+        <p class="textColorWhite">Tema Escola Modelo <a href="http://www.interlegis.leg.br/" style="text-decoration: none;"><p class="littleTitle">Interlegis - 2019 Copyright - All Rights Reserved Terms of Service</p></a></p>
+    </footer>    
+    -->
     {{>theme_escola_modelo/footer}}
 </body>
 </html>
