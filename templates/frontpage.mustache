@@ -40,7 +40,7 @@
 <!-- Placeholders do template: não remover!!-->
 <!-- {{{ output.course_content_header }}} -->
 <!-- {{{ output.main_content }}}          -->
- 
+
 <!-- {{{ output.course_content_footer }}} -->
 {{{ output.doctype }}}
 
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#00305c" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>{{{casalegislativa_nome}}}</title>
-    
+
     <link rel="stylesheet" type="text/css" href="{{moodle_url}}/theme/escola_modelo/style/frontpage.css">
     <script src="{{moodle_url}}/theme/escola_modelo/js/frontpage.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -115,19 +115,19 @@
         </div>
     </nav>
 
-    <div class="bgGradient">  
+    <div class="bgGradient">
 	    <div id="particles">
 		    <div id="webcoderskull">
 		        <h1>{{{sitename}}}</h1>
 		        <p class="littleSubtitle">{{{casalegislativa_nome}}}</p>
 		    </div>
 	    </div>
-    <div>
-    
+    </div>
+
     <!-- Notícias -->
 
     <div id="news">
-        <div class="">    
+        <div class="">
             <div class="row mb-5 propertiesNews">
                 <div class="col-12 py-4 bg-dark">
                     <div class="row">
@@ -166,7 +166,7 @@
     <div id="mostViewed">
 		<br>
 		<br>
-		<h2 class="heading-secondary propertiesTitleCenter letterSpacing"> Cursos Mais Procurados</h1>
+		<h2 class="heading-secondary propertiesTitleCenter letterSpacing"> Cursos Mais Procurados</h2>
   	</div>
 
     <div class="container cta-100">
@@ -199,7 +199,7 @@
                                         <h5>{{{nome}}}</h5>
                                     </a>
                                     </div>
-                                    <div class="item-box-blog-data" style="padding: px 15px;">
+                                    <div class="item-box-blog-data" style="padding: 15px;">
                                     <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(3)</p>
                                     </div>
                                     <div class="item-box-blog-text">
@@ -226,7 +226,7 @@
 
     <section class="section-tours" id="courses">
         <div class=" text-center  u-margin-bottom-medium" style="margin-bottom: 40px;">
-            <br><br>  
+            <br><br>
             <h2 class="heading-secondary letterSpacing">
                 Cursos Disponíveis
             </h2>
@@ -248,13 +248,18 @@
         </div>
 
         <div class="roww">
-            <div class="col-1-of-1">
+
                 {{#cursos_home}}
+
                 {{#categorias}}
+
                 {{#categoria}}
+
                     <!--<h4>{{{nome}}}</h4> -->
+
                     {{#cursos}}
-                        <div class="card">
+                    <div>
+                        <div class="card cardProp">
                             <div class="card__side card__side--front">
                                 <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
                                 </div>
@@ -279,7 +284,7 @@
                                             <label for="1-star" class="star">&#9733;</label>
                                             </div>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -300,14 +305,13 @@
                 {{/categoria}}
                 {{/categorias}}
                 {{/cursos_home}}
-            </div>        
-        </div>
+            </div>
     </section>
 
     <!--
     <footer class="footer text-center bg-dark">
         <p class="textColorWhite">Tema Escola Modelo <a href="http://www.interlegis.leg.br/" style="text-decoration: none;"><p class="littleTitle">Interlegis - 2019 Copyright - All Rights Reserved Terms of Service</p></a></p>
-    </footer>    
+    </footer>
     -->
     {{>theme_escola_modelo/footer}}
 </body>
@@ -318,7 +322,7 @@
     $(document).ready(function() {
         $('.item').first().addClass("active", "true");
     });
-    
+
     function MudarEstado(el) {
         var display = document.getElementById(el).style.display;
         if (display == "none")
