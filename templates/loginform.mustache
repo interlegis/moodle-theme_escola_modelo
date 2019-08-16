@@ -99,22 +99,24 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    {{! 
+    {{!
+
     FIXME quebra formatação do header ao habilitar
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-     }}
-    {{! 
+    }}
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {{!
     FIXME parecem já ser incluídas no head do tema
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
      }}
 
-    <section class="login-block">
+    <section class="login-block" style="padding-top: 50px;">
       <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex !important;">
           <div class="col-md-4">
             <div class="divLogoProperties">
                 {{#logourl}}
@@ -126,12 +128,11 @@
                 {{/logourl}}
             </div>
             <div class="accordion" id="accordionExample">
-              
-              {{#hasidentityproviders}}
-              {{#identityproviders}}
+
+
 
               <div class="card colorLoginUser">
-                <div class="card-header boxShadow" id="headingOne">
+                <div class="card-header" id="headingOne">
                   <h2 class="mb-0">
                     <a class="btn btn-link collapsed textDecorationProperties btn-block" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                       <i class="icon fa fa-university"></i>
@@ -141,21 +142,20 @@
                 </div>
                 <div id="collapseOne" class="collapse show colorLoginClear" aria-labelledby="headingOne" data-parent="#accordionExample">
                   <div class="card-body">
-                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-interlegis btn-lg btn-block">
-                        {{#iconurl}}
-                            <img src="{{iconurl}}" style="width: 16px" id="imgLogin" alt="" />Autenticação EVL
-                        {{/iconurl}}
+                    <a href="{{url}}" title="Autenticaao EVL" class="btn btn-interlegis btn-lg btn-block">
+
+                            <img src="https://facebookbrand.com/wp-content/uploads/2016/05/flogo_rgb_hex-brc-site-250.png" style="width: 16px" id="imgLogin" alt="" />Autenticação EVL
+
                         <!--{{name}} -->
                     </a>
                   </div>
                 </div>
               </div>
-              {{/identityproviders}}
-              {{/hasidentityproviders}}                   
+
 
 
                 <div class="card colorLoginAdm">
-                  <div class="card-header boxShadow" id="headingTwo">
+                  <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
                       <a class="btn btn-link collapsed textDecorationProperties btn-block"data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <i class="icon fa fa-cogs"></i>
@@ -163,10 +163,10 @@
                       </a>
                     </h2>
                   </div>
-                  
+
                   <div id="collapseTwo" class="collapse colorLoginClear" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    
-                    
+
+
                     <div class="card-body">
                     {{#error}}
                         <!-- FIXME melhorar erro de login (ativar seção em caso de erro) -->
@@ -181,7 +181,7 @@
                         <input type="hidden" name="logintoken" value="{{logintoken}}">
 
                         <div class="form-group">
-                          <input type="text" name="username" id="username" class="form-control" 
+                          <input type="text" name="username" id="username" class="form-control"
                             placeholder={{#quote}}{{^canloginbyemail}}{{#str}}username{{/str}}{{/canloginbyemail}}{{#canloginbyemail}}{{#str}}usernameemail{{/str}}{{/canloginbyemail}}{{/quote}}
                             autocomplete="username" value="{{username}}">
                         </div>
@@ -196,12 +196,12 @@
                               <label class="form-check-label">
                                 <input type="checkbox" name="rememberusername" id="rememberusername" value="1" {{#username}}checked="checked"{{/username}} />
                                 <small for="rememberusername">{{#str}} rememberusername, admin {{/str}}</small>
-                                
+
                                 {{! TODO ver alguma forma de mostrar tooltip abaixo
                                     <span class="tooltiptext">{{#str} cookiesenabled {{/str}</span>
                                  }}
                               </label>
-                               
+
                             </div>
                         {{/rememberusername}}
                         <button type="submit" id="loginbtn" class="btn btn-login float-right">Entrar</button>
@@ -216,7 +216,7 @@
                 {{#canloginasguest}}
                   <div class="card colorLoginAdm">
 
-                        <div class="card-header boxShadow" id="headingThree">
+                        <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
                                 <a class="btn btn-link collapsed textDecorationProperties btn-block" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 <i class="icon fa fa-user-secret"></i>
@@ -236,14 +236,14 @@
                             </form>
                         </div>
 
-                    <div class="card-header boxShadow" id="headingThree">
+                    <div class="card-header" id="headingThree">
                     </div>
                   </div>
                 {{/canloginasguest}}
 
                   <!--
                   <div class="card colorLoginAdm">
-                    <div class="card-header boxShadow" id="headingFour">
+                    <div class="card-header" id="headingFour">
                       <h2 class="mb-0">
                         <a class="btn btn-link collapsed textDecorationProperties btn-block" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                           <i class="icon fa fa-user"></i>
@@ -252,7 +252,7 @@
                       </h2>
                     </div>
                     <div id="collapseFour" class="collapse colorLoginClear" aria-labelledby="headingFour" data-parent="#accordionExample">
-                      <div class="card-body">     
+                      <div class="card-body">
                         <form class="login-form">
                           <div class="form-group">
                             <input type="text" class="form-control" placeholder="Usuário">
@@ -275,7 +275,7 @@
                 </div>
                 <div class="divPoweredBy">
                   <a href="http://www.interlegis.leg.br/" style="text-decoration: none;"><p class="poweredBy">Interlegis - 2019 Copyright - All Rights Reserved Terms of Service</p></a>
-                </div>               
+                </div>
               </div>
               <div class="col-md-8 banner-sec">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -291,7 +291,7 @@
                       <div class="banner-text">
                         <h2>Os melhores cursos</h2>
                         <p>Cursos de capacitação voltados ao servidor.</p>
-                      </div>  
+                      </div>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -300,7 +300,7 @@
                       <div class="banner-text">
                         <h2>Facilidade de acesso</h2>
                         <p>Acesso facilitado para cumprimento onde quer que o servidor esteja.</p>
-                      </div>  
+                      </div>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -309,16 +309,16 @@
                       <div class="banner-text">
                         <h2>Incentivo a atualização de conhecimentos</h2>
                         <p>Atualize-se e conheça novas áreas de conhecimento.</p>
-                      </div>  
+                      </div>
                     </div>
                   </div>
-                </div>     
+                </div>
               </div>
             </div>
           </div>
       </section>
 
-{{! 
+{{!
 TODO: verificar conveniência de link para criar nova conta
 
             {{#cansignup}
