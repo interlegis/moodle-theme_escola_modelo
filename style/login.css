@@ -5,7 +5,8 @@
 .container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
 .carousel-inner{border-radius:0 10px 10px 0;}
 .carousel-caption{text-align:left; left:5%;}
-.btn-login{background: #DE6262; color:#fff; font-weight:600;}
+.btn-login{background: #DE6262 !important; color:#fff !important; font-weight:600;}
+.btn-login:hover{background: #e17171 !important; color:#fff !important; font-weight:600;}
 .banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
 .banner-text h2{color:#fff; font-weight:600;}
 .banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
