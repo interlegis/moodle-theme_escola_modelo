@@ -25,12 +25,16 @@
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/../config.php');
+require_once($CFG->dirroot.'/blocks/escola_modelo/classes/util.php');
 
 //include($CFG->libdir .'/httpful.phar');
 
 
 $welcomeMessage = $this->page->theme->settings->welcome;
 $footer = $this->page->theme->settings->footersimple;
+
+$central_autenticacao_url = evlURLWebServices();
+
 
 // $destaquesEVL = '{
 // 	cursos: {
@@ -158,7 +162,8 @@ if (isloggedin()) {
 		'output.favicon' => $OUTPUT->image_url('favicon', 'theme'),
 		'cursos_evl' => $destaques_evl,		 //$response->body
 		'footer' => $footer, 
-		'cursos_home' => $cursosHome
+		'cursos_home' => $cursosHome,
+		'central_autenticacao_url' => $central_autenticacao_url
 	];
 
 // Descobrir quais categorias de curso estão disponíveis para serem exibidas
@@ -204,7 +209,8 @@ if (isloggedin()) {
         'output.favicon' => $OUTPUT->image_url('favicon', 'theme'),
 		'cursos_evl' => $destaques_evl, 
 		'footer' => $footer, 
-		'cursos_home' => $cursosHome
+		'cursos_home' => $cursosHome,
+		'central_autenticacao_url' => $central_autenticacao_url
 	];
 }
 

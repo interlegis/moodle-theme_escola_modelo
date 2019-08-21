@@ -68,6 +68,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 
 <body {{{ bodyattributes }}}>
@@ -106,7 +107,7 @@
 
 
                     <li class="nav-item">
-                        <a href="https://autenticacaoh.interlegis.leg.br/" class="btn btn-rose btn-raised btn-round">
+                        <a href="{{{central_autenticacao_url}}}" class="btn btn-rose btn-raised btn-round">
                             Log In
                         </a>
                     </li>
@@ -234,9 +235,12 @@
         </div>
 
         <div id="cover">
-            <form method="get" action="">
+            <form name='formPesquisa' id='formPesquisa' method="POST" action="{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php">
                 <div class="tb">
-                    <div class="td"><input type="text" required></div>
+                    <input type="text" required name='expression'>
+                    <div class="td">
+                    <input type="hidden" required name='schooxl' value='SAB'>
+                    </div>
                     <div class="td" id="s-cover">
                         <button type="submit">
                         <div id="s-circle"></div>
@@ -247,65 +251,60 @@
             </form>
         </div>
 
-        <div class="roww">
+        <div id='cursosDisponiveis' class="roww">
 
                 {{#cursos_home}}
-
                 {{#categorias}}
-
                 {{#categoria}}
 
                     <!--<h4>{{{nome}}}</h4> -->
-
                     {{#cursos}}
-                    <div>
-                            <div class="card cardProp">
-                            <div class="card__side card__side--front">
-                                <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--2">{{{nome}}}</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li><b>Certificador: </b> SBH</li>
-                                        <li><b>Conteudista: </b>ILB</li>
-                                        <li><b>Carga Horária: </b>30h</li>
-                                        <li><div class="star-rating">
-                                            <input type="radio" id="5-stars" name="rating" value="5" />
-                                            <label for="5-stars" class="star">&#9733;</label>
-                                            <input type="radio" id="4-stars" name="rating" value="4" />
-                                            <label for="4-stars" class="star">&#9733;</label>
-                                            <input type="radio" id="3-stars" name="rating" value="3" />
-                                            <label for="3-stars" class="star">&#9733;</label>
-                                            <input type="radio" id="2-stars" name="rating" value="2" />
-                                            <label for="2-stars" class="star">&#9733;</label>
-                                            <input type="radio" id="1-star" name="rating" value="1" />
-                                            <label for="1-star" class="star">&#9733;</label>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                    <div class="card cardProp">
+                        <div class="card__side card__side--front">
+                            <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
                             </div>
-                            <div class="card__side card__side--back card__side--back-2 pos">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <h1 class="h1Properties">{{{nome}}}</h1>
-                                        <p style="text-align: justify;">{{{descricao}}}</p>
-                                        <div class="posBottom">
-                                            <button type="button" class="btn btn-inscrever btn-block">Matricular</button>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">{{{nome}}}</span>
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li><b>Certificador: </b> SBH</li>
+                                    <li><b>Conteudista: </b>ILB</li>
+                                    <li><b>Carga Horária: </b>30h</li>
+                                    <li><div class="star-rating">
+                                        <input type="radio" id="5-stars" name="rating" value="5" />
+                                        <label for="5-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="4-stars" name="rating" value="4" />
+                                        <label for="4-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="3-stars" name="rating" value="3" />
+                                        <label for="3-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="2-stars" name="rating" value="2" />
+                                        <label for="2-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="1-star" name="rating" value="1" />
+                                        <label for="1-star" class="star">&#9733;</label>
                                         </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-2 pos">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <h1 class="h1Properties">{{{nome}}}</h1>
+                                    <p style="text-align: justify;">{{{descricao}}}</p>
+                                    <div class="posBottom">
+                                        <a href="" type="button" class="btn btn-inscrever btn-block">Matricular</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{/cursos}}
                     </div>
+                    {{/cursos}}
                 {{/categoria}}
                 {{/categorias}}
                 {{/cursos_home}}
-            </div>
+        </div>
     </section>
 
     <!--
@@ -328,6 +327,82 @@
         if (display == "none")
             document.getElementById(el).style.display = 'block';
     }
+
+    $( "#formPesquisa" ).submit(function( event ) {
+        event.preventDefault();
+        
+        var form = $(this);
+        var url = "{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php";
+        
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                $("#cursosDisponiveis").empty();
+
+                if($.isEmptyObject(data.cursos)) {
+                    $("#cursosDisponiveis").html("<p>Nenhum curso foi encontrado</p>");
+                } else {
+                    $.each(data.cursos, function(idx, curso) { 
+                        
+                        var curso = `
+                            <div class="card cardProp">
+                                <div class="card__side card__side--front">
+                                    <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--2">` + curso.name + `</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        <ul>
+                                            <li><b>Certificador: </b> SBH</li>
+                                            <li><b>Conteudista: </b>ILB</li>
+                                            <li><b>Carga Horária: </b>30h</li>
+                                            <li><div class="star-rating">
+                                                <input type="radio" id="5-stars" name="rating" value="5" />
+                                                <label for="5-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="4-stars" name="rating" value="4" />
+                                                <label for="4-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="3-stars" name="rating" value="3" />
+                                                <label for="3-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="2-stars" name="rating" value="2" />
+                                                <label for="2-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="1-star" name="rating" value="1" />
+                                                <label for="1-star" class="star">&#9733;</label>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-2 pos">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <h1 class="h1Properties">` + curso.name + `</h1>
+                                            <p style="text-align: justify;">` + curso.description + `</p>
+                                            <div class="posBottom">
+                                                <a href="` + curso.url + `" type="button" class="btn btn-inscrever btn-block">Matricular</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+                        
+                        $("#cursosDisponiveis").append(curso);
+                
+                    });
+                }
+            
+                //alert(data.cursos); // show response from the php script.
+            },
+            error: function(e) {
+                $("#cursosDisponiveis").html("<p>Ocorreu um erro na pesquisa de cursos</p>");
+            }
+        });
+    });
 
 </script>
 {{#js}}
