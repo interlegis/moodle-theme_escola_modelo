@@ -222,9 +222,7 @@
           </div>
         </div>
     </div>
-
     <!-- Cursos disponíveis -->
-
     <section class="section-tours" id="courses">
         <div class=" text-center  u-margin-bottom-medium" style="margin-bottom: 40px;">
             <br><br>
@@ -233,7 +231,6 @@
             </h2>
             <br><br>
         </div>
-
         <div id="cover">
             <form name='formPesquisa' id='formPesquisa' method="POST" action="{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php">
                 <div class="tb">
@@ -330,10 +327,10 @@
 
     $( "#formPesquisa" ).submit(function( event ) {
         event.preventDefault();
-        
+
         var form = $(this);
         var url = "{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php";
-        
+
         $.ajax({
             type: "POST",
             url: url,
@@ -343,10 +340,10 @@
                 $("#cursosDisponiveis").empty();
 
                 if($.isEmptyObject(data.cursos)) {
-                    $("#cursosDisponiveis").html("<p>Nenhum curso foi encontrado</p>");
+                    $("#cursosDisponiveis").html("<section class=\"error_section\"><p class=\"error_section_subtitle\">Nenhum Curso Encontrado</p><h1 class=\"error_title\"><p>404</p>404</h1></section>");
                 } else {
-                    $.each(data.cursos, function(idx, curso) { 
-                        
+                    $.each(data.cursos, function(idx, curso) {
+
                         var curso = `
                             <div class="card cardProp">
                                 <div class="card__side card__side--front">
@@ -390,16 +387,16 @@
                                 </div>
                             </div>
                             `;
-                        
+
                         $("#cursosDisponiveis").append(curso);
-                
+
                     });
                 }
-            
+
                 //alert(data.cursos); // show response from the php script.
             },
             error: function(e) {
-                $("#cursosDisponiveis").html("<p>Ocorreu um erro na pesquisa de cursos</p>");
+                $("#cursosDisponiveis").html("<section class=\"error_section\"><p class=\"error_section_subtitle\">Ocorreu um erro</p><h1 class=\"error_title\"><p>404</p>404</h1></section>");
             }
         });
     });
