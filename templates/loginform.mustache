@@ -120,7 +120,8 @@
             </div>
             <div class="accordion" id="accordionExample">
 
-
+            {{#hasidentityproviders}}
+            {{#identityproviders}}
 
               <div class="card colorLoginUser">
                 <div class="card-header" id="headingOne">
@@ -141,7 +142,9 @@
                 </div>
               </div>
 
-
+            {{/identityproviders}}
+            {{/hasidentityproviders}}
+            
 
                 <div class="card colorLoginAdm">
                   <div class="card-header" id="headingTwo">
