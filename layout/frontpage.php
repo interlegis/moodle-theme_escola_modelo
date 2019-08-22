@@ -33,8 +33,7 @@ require_once($CFG->dirroot.'/blocks/escola_modelo/classes/util.php');
 $welcomeMessage = $this->page->theme->settings->welcome;
 $footer = $this->page->theme->settings->footersimple;
 
-$central_autenticacao_url = evlURLWebServices();
-
+//$central_autenticacao_url = evlURLWebServices();
 
 // $destaquesEVL = '{
 // 	cursos: {
@@ -163,7 +162,8 @@ if (isloggedin()) {
 		'cursos_evl' => $destaques_evl,		 //$response->body
 		'footer' => $footer, 
 		'cursos_home' => $cursosHome,
-		'central_autenticacao_url' => $central_autenticacao_url
+		'central_autenticacao_url' => $central_autenticacao_url,
+		'session' => sesskey()
 	];
 
 // Descobrir quais categorias de curso estão disponíveis para serem exibidas
@@ -210,7 +210,8 @@ if (isloggedin()) {
 		'cursos_evl' => $destaques_evl, 
 		'footer' => $footer, 
 		'cursos_home' => $cursosHome,
-		'central_autenticacao_url' => $central_autenticacao_url
+		'central_autenticacao_url' => $central_autenticacao_url,
+		'session' => sesskey()
 	];
 }
 
