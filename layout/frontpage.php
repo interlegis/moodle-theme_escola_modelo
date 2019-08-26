@@ -33,7 +33,7 @@ require_once($CFG->dirroot.'/blocks/escola_modelo/classes/util.php');
 $welcomeMessage = $this->page->theme->settings->welcome;
 $footer = $this->page->theme->settings->footersimple;
 
-//$central_autenticacao_url = evlURLWebServices();
+$central_autenticacao_url = evlURLWebServices();
 
 // $destaquesEVL = '{
 // 	cursos: {
@@ -41,7 +41,7 @@ $footer = $this->page->theme->settings->footersimple;
 // 	}
 // }';
 
-// $uri = 'https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z';
+// $uri = 'https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=L3iQ2LJuaqxWqsxRF3Tk4x3QaypEay6APDpLzcYdSlxvRtYkHY';
 // $response = \Httpful\Request::get($uri)
 // 	->expectsJson()
 // 	//->body($json)
@@ -55,48 +55,74 @@ $destaques_evl = ''; //$response->body;
 $indMostrarCarrossel = true;
 $bodyattributes = ''; //$OUTPUT->body_attributes($extraclasses);
 
+function getJsonCursosHomeWS() {
+	 $uri = 'http://localhost:3000/api/v1/cursos?key=6iwXud8cubFTlGWgd8FucO6kzT8BAFXRfd7eXlZLMT3bOgPuMg';
+	 $response = \Httpful\Request::get($uri)
+	 	->expectsJson()
+	 	//->body($json)
+	 	->send();
+	return  $response->body;
+}
+
+
 function getJsonCursosHome() {
 	return json_decode(
-		'{ "categorias" : 
-			[ 
-				{
-					"categoria": {
-						"id" : "1",
-						"nome": "Categoria 1"
-					},
-					"cursos": [
-						{
-							"id": "1",
-							"nome": "Curso 1",
-							"descricao": "Descrição do curso 1"
-						},
-						{
-							"id": "2",
-							"nome": "Curso 2",
-							"descricao": "Descrição do curso 1"
-						}
-					]
-				}, 
-				{
-					"categoria": {
-						"id" : "2",
-						"nome": "Categoria 2"
-					},
-					"cursos": [
-						{
-							"id": "3",
-							"nome": "Curso 3",
-							"descricao": "Descrição do curso 3"
-						}
-					]
-				}
+		'{"cursos": [
+			{
+				"id": "3",
+				"nome": "Curso 3",
+				"descricao": "Descrição do curso 3"
+			},
+			{
+				"id": "4",
+				"nome": "Curso 4",
+				"descricao": "Descrição do curso 4"
+			},
+			{
+				"id": "5",
+				"nome": "Curso 5",
+				"descricao": "Descrição do curso 5"
+			},
+			{
+				"id": "6",
+				"nome": "Curso 6",
+				"descricao": "Descrição do curso 6"
+			},
+			{
+				"id": "7",
+				"nome": "Curso 7",
+				"descricao": "Descrição do curso 7"
+			}
+		]}'
+	);
+}
+
+function getAvisos() {
+	return json_decode(
+		'{ 
+			"noticias":[  
+			   {  
+				  "id":1,
+				  "tag":"MANUTENÇÃO",
+				  "titulo":"Manutenção programada em 30/02/2020",
+				  "link":"http://www.corensc.gov.br/pagina-em-manutencao/pagina-em-manutencao-2/",
+				  "icone":"https://www2.emc.ufg.br/up/440/o/paginaEmConstrucao.png"
+			   },
+			   {  
+				  "id":2,
+				  "tag":"INSCRIÇÕES ABERTAS",
+				  "titulo":"Curso de Processo Legislativo Federal está com inscrições aberta",
+				  "link":"https://educacaoadistancia.camara.leg.br/site/921/processo-legislativo/",
+				  "icone":""
+			   }
 			]
-		}'
+		 }'
 	);
 }
 
 $cursosHome = getJsonCursosHome();
-//$avisoHome = getAviso();
+//$cursosHome = getJsonCursosHomeWS();
+$avisosHome = getAvisos();
 
 
 if (isloggedin()) {
@@ -163,7 +189,8 @@ if (isloggedin()) {
 		'footer' => $footer, 
 		'cursos_home' => $cursosHome,
 		'central_autenticacao_url' => $central_autenticacao_url,
-		'session' => sesskey()
+		'session' => sesskey(),
+		'avisos' => $avisosHome
 	];
 
 // Descobrir quais categorias de curso estão disponíveis para serem exibidas
@@ -211,7 +238,8 @@ if (isloggedin()) {
 		'footer' => $footer, 
 		'cursos_home' => $cursosHome,
 		'central_autenticacao_url' => $central_autenticacao_url,
-		'session' => sesskey()
+		'session' => sesskey(),
+		'avisos' => $avisosHome
 	];
 }
 

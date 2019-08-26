@@ -28,6 +28,8 @@ $string['rawscsspre_desc'] = 'Raw SCSS Pre';
 $string['rawscss'] = 'Raw SCSS';
 $string['rawscss_desc'] = 'Raw SCSS';
 
+$string['header'] = 'Cabeçalho';
+$string['header_desc'] = 'Texto do cabeçalho exibido na página principal';
 $string['footer'] = 'Rodapé principal';
 $string['footer_desc'] = 'Texto do rodapé exibido na página principal';
 $string['footersimple'] = 'Rodapé simples';

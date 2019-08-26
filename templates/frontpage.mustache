@@ -127,6 +127,7 @@
 
     <!-- Notícias -->
 
+    {{#avisos}}
     <div id="news">
         <div class="">
             <div class="row mb-5 propertiesNews">
@@ -136,12 +137,18 @@
                             <div class="breaking-box">
                                 <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
-                                        <div class="carousel-item">
-                                            <a href=""><span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >INTERLEGIS</span></a> <a class="text-white" href="">Interlegis oferece curso gratuito para a população</a>
+                                        {{#noticias}}
+
+                                        <div class="carousel-item aviso">
+                                            <a href="{{{link}}}">
+                                                <span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >{{{tag}}}</span>
+                                            </a> 
+                                            <a class="text-white" href="{{{link}}}">
+                                            <img src="{{{icone}}}" style="width: 20px;"> {{{titulo}}}
+                                            </a>
                                         </div>
-                                        <div class="carousel-item active">
-                                            <a href=""><span class="position-relative mx-2 badge badge-primary rounded-0 corWarning">MANUTENÇÃO </span></a> <a class="text-white" href=""><img src="https://img.icons8.com/offices/30/000000/under-construction.png" style="width: 20px;"> Manutenção rotineira marcada para dia 32/13/2014</a>
-                                        </div>
+
+                                        {{/noticias}}
                                     </div>
                                     <div class="navigation-box p-2 d-none d-sm-block">
                                         <a class="carousel-control-prev colorNext" href="#carouselbreaking" role="button" data-slide="prev">
@@ -161,6 +168,7 @@
             </div>
         </div>
     </div>
+    {{/avisos}}
 
     <!-- Cursos mais procurados -->
 
@@ -184,15 +192,13 @@
                   <div class="carousel-item active">
                     <div class="row">
                         {{#cursos_home}}
-                        {{#categorias}}
-                        {{#categoria}}
                             <!--<h4>{{{nome}}}</h4>-->
                             {{#cursos}}
                             <div class="col-md-4" >
                                 <div class="item-box-blog">
                                 <div class="item-box-blog-image">
                                     <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">20 de Agosto</span> </div>
-                                    <figure> <img alt="" src="https://saberes.senado.leg.br/pluginfile.php/2273557/course/overviewfiles/Cerimonial%20no%20Ambiente%20Legislativo-min.png"> </figure>
+                                    <figure> <img alt="" src="{{{logo}}}"> </figure>
                                 </div>
                                 <div class="item-box-blog-body">
                                     <div class="item-box-blog-heading">
@@ -211,8 +217,6 @@
                                 </div>
                             </div>
                             {{/cursos}}
-                        {{/categoria}}
-                        {{/categorias}}
                         {{/cursos_home}}
                     </div>
                   </div>
@@ -320,6 +324,7 @@
 
     $(document).ready(function() {
         $('.item').first().addClass("active", "true");
+        $('.aviso').first().addClass("active", "true");
     });
 
     function MudarEstado(el) {

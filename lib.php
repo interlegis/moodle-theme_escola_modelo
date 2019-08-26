@@ -34,7 +34,7 @@ function theme_escola_modelo_css_tree_post_processor($tree, $theme) {
     $prefixer = new theme_escola_modelo\autoprefixer($tree);
     $prefixer->prefix();
 }
-
+    
 /**
  * Inject additional SCSS.
  *
