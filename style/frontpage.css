@@ -819,3 +819,126 @@ button span:before, button span:after
     margin:2.5% !important;
     float: left !important;
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-weight: 600;
+    color: #343434;
+}
+
+.error_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(-225deg, #1A1A1A, #343434);
+}
+.error_section_subtitle {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5pt;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: -5em;
+}
+.error_section .error_title {
+    --x-shadow: 0;
+    --y-shadow: 0;
+    --x:50%;
+    --y:50%;
+    font-size: 15rem;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 2rem;
+}
+.error_section .error_title:hover {
+    transition: all 0.2s ease;
+    text-shadow: var(--x-shadow) var(--y-shadow) 10px #1A1A1A;
+}
+.error_section .error_title p {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-image: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.05), transparent);
+    background-position: var(--x) var(--y);
+    background-repeat: no-repeat;
+    text-shadow: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.1s ease;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    transition: 1s;
+}
+.span{
+    position: absolute;
+    transform: translate(-50%, 50%);
+    width: 120px;
+    height: 120px;
+    top: 35%;
+    border: 5px solid #262626;
+    z-index: 1;
+    animation: animar 2.5s linear infinite;
+}
+.span:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #262626;
+    animation: animarbg 2.5s linear infinite;
+}
+
+@keyframes animar {
+    0% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, 50%) rotate(180deg);
+    }
+    50% {
+        transform: translate(-50%, 50%) rotate(180deg);
+    }
+    75% {
+        transform: translate(-50%, 50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, 50%) rotate(360deg);
+    }
+}
+@keyframes animarbg {
+    0% {
+        height: 0;
+    }
+    25% {
+        height: 0;
+    }
+    50% {
+        height: 100%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
