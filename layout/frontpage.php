@@ -67,13 +67,24 @@ function getJsonCursosHomeWS() {
 
 function getJsonCursosHome() {
 	return json_decode(
-		'{"cursos": [
+		'[
+		[{
+				"id": "1",
+				"nome": "Curso 1",
+				"descricao": "Descrição do curso 1"
+			},
+			{
+				"id": "2",
+				"nome": "Curso 2",
+				"descricao": "Descrição do curso 2"
+			},
 			{
 				"id": "3",
 				"nome": "Curso 3",
 				"descricao": "Descrição do curso 3"
-			},
-			{
+			}
+		],
+		[{
 				"id": "4",
 				"nome": "Curso 4",
 				"descricao": "Descrição do curso 4"
@@ -87,13 +98,25 @@ function getJsonCursosHome() {
 				"id": "6",
 				"nome": "Curso 6",
 				"descricao": "Descrição do curso 6"
-			},
-			{
+			}
+		],
+		[{
 				"id": "7",
 				"nome": "Curso 7",
 				"descricao": "Descrição do curso 7"
+			},
+			{
+				"id": "8",
+				"nome": "Curso 8",
+				"descricao": "Descrição do curso 8"
+			},
+			{
+				"id": "9",
+				"nome": "Curso 9",
+				"descricao": "Descrição do curso 9"
 			}
-		]}'
+		]
+	]'
 	);
 }
 
@@ -145,7 +168,7 @@ if (isloggedin()) {
 
 //var obj = JSON.parse($response->data);
 //var data = '{cursos: obj.prop['cursos'].map(function(x){ return {name: x}; })}';
-  
+
   //echo 'Tem erro: ' . $response->code;
   //echo $response;
 
@@ -186,7 +209,7 @@ if (isloggedin()) {
 		'6_imagem_card' => $OUTPUT->image_url('6_imagem_card', 'theme'),
 		'output.favicon' => $OUTPUT->image_url('favicon', 'theme'),
 		'cursos_evl' => $destaques_evl,		 //$response->body
-		'footer' => $footer, 
+		'footer' => $footer,
 		'cursos_home' => $cursosHome,
 		'central_autenticacao_url' => $central_autenticacao_url,
 		'session' => sesskey(),
@@ -234,8 +257,8 @@ if (isloggedin()) {
         '5_imagem_card' => $OUTPUT->image_url('5_imagem_card', 'theme'),
         '6_imagem_card' => $OUTPUT->image_url('6_imagem_card', 'theme'),
         'output.favicon' => $OUTPUT->image_url('favicon', 'theme'),
-		'cursos_evl' => $destaques_evl, 
-		'footer' => $footer, 
+		'cursos_evl' => $destaques_evl,
+		'footer' => $footer,
 		'cursos_home' => $cursosHome,
 		'central_autenticacao_url' => $central_autenticacao_url,
 		'session' => sesskey(),

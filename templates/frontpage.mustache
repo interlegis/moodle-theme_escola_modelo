@@ -142,7 +142,7 @@
                                         <div class="carousel-item aviso">
                                             <a href="{{{link}}}">
                                                 <span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >{{{tag}}}</span>
-                                            </a> 
+                                            </a>
                                             <a class="text-white" href="{{{link}}}">
                                             <img src="{{{icone}}}" style="width: 20px;"> {{{titulo}}}
                                             </a>
@@ -178,6 +178,63 @@
 		<h2 class="heading-secondary propertiesTitleCenter letterSpacing"> Cursos Mais Procurados</h2>
   	</div>
 
+
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+
+
+
+            {{#cursos_home}}
+                <div class="carousel-item item">
+                {{#.}} <!-- lista principal -->
+                    {{#.}} <!-- lista de blocos -->
+                        <div style="width: 33%; position: relative; display: inline-block; height: 400px">
+                            <div class="item-box-blog-image" style="position: absolute">
+                                <div class="date-img1 bg-blue-ui white"> <span class="mon">10 de Agosto</span></div>
+                            </div>
+                            <img class="d-block positionImgCourses" src="https://www.senado.leg.br/atividade/plenario/ordemdodia/Img/brasaoColorDeg.png" alt="First slide">
+                            <div class="positionBgCourses">
+                                <h4 class="label-style h4CoursesProperties "  data-toggle="tooltip" data-placement="top" title="{{{descricao}}}">{{{nome}}}</h4>
+                            </div>
+                        </div>
+                    {{/.}}
+                {{/.}}
+            </div>
+            {{/cursos_home}}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+
     <div class="container cta-100">
         <div class="container">
           <div class="row blog">
@@ -192,7 +249,7 @@
                   <div class="carousel-item active">
                     <div class="row">
                         {{#cursos_home}}
-                            <!--<h4>{{{nome}}}</h4>-->
+                            //<h4>{{{nome}}}</h4>
                             {{#cursos}}
                             <div class="col-md-4" >
                                 <div class="item-box-blog">
@@ -226,6 +283,8 @@
           </div>
         </div>
     </div>
+
+    -->
     <!-- Cursos disponíveis -->
     <section class="section-tours" id="courses">
         <div class=" text-center  u-margin-bottom-medium" style="margin-bottom: 40px;">
