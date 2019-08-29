@@ -182,12 +182,12 @@
 
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators carIndic">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner sizeCarousel">
 
 
 
@@ -195,19 +195,51 @@
                 <div class="carousel-item item">
                 {{#.}} <!-- lista principal -->
                     {{#.}} <!-- lista de blocos -->
-                        <div style="width: 33%; position: relative; display: inline-block; height: 400px">
-                            <div class="item-box-blog-image" style="position: absolute">
-                                <div class="date-img1 bg-blue-ui white"> <span class="mon">10 de Agosto</span></div>
+                        <div style="width: 33%; position: relative; display: inline-block; height: 420px">
+                            <div class="positionImgCourses">
+                                <div class="row customrow " style="width: 100%;">
+                                    <div style="width: 50%;" class="rowdate textInfoProp paddingtop5">
+                                        10 de Agosto
+                                    </div>
+                                    <div style="width: 50%;" class="">
+                                    </div>
+                                </div>
+                                <img class="d-block imgprop" src="https://www.senado.leg.br/atividade/plenario/ordemdodia/Img/brasaoColorDeg.png" alt="First slide">
+                                <div class="row customrow " style="width: 100%;">
+                                    <div style="width: 50%;">
+                                    </div>
+                                    <a class="mouseProperties paddingtop5 rowinfo textInfoProp" style="width: 50%" data-toggle="modal" data-target="#exampleModalLong">
+                                        <div>
+                                             Mais Informações
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <img class="d-block positionImgCourses" src="https://www.senado.leg.br/atividade/plenario/ordemdodia/Img/brasaoColorDeg.png" alt="First slide">
                             <div class="positionBgCourses">
-                                <h4 class="label-style h4CoursesProperties "  data-toggle="tooltip" data-placement="top" title="{{{descricao}}}">{{{nome}}}</h4>
+                                <h4 class="label-style h4CoursesProperties " data-toggle="tooltip" data-placement="top" title="{{{descricao}}}">{{{nome}}}</h4>
                             </div>
                         </div>
                     {{/.}}
                 {{/.}}
             </div>
             {{/cursos_home}}
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Mais Informações</h5>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer row customrow">
+                            <button type="button" class="buttonprop btnVermelho" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="buttonprop btnVerde">Inscrever</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -218,11 +250,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
-
-
-
-
 
 
 

@@ -4567,29 +4567,21 @@ body {
         height: 0;
     }
 }
-.date-img1{
+.date-img{
     position: fixed;
     z-index: 5;
     padding: 4px 20px;
-    top: 1%;
-    left: 28.5%;
+    margin-left: 20%;
 }
-.date-img2{
+.info-img{
     position: fixed;
     z-index: 5;
     padding: 4px 20px;
-    top: 1%;
-    left: 52.5%;
-}
-.date-img3{
-    position: fixed;
-    z-index: 5;
-    padding: 4px 20px;
-    top: 1%;
-    left: 77%;
+    margin-left: 1.6%;
+    margin-top: 24.2%;
 }
 .label-style {
-    padding:25px;
+    padding:30px;
     color:#fff;
     background: #003a70 !important;
 
@@ -4615,7 +4607,7 @@ body {
 }
 .positionImgCourses{
     width: 350px !important;
-    height: 300px;
+    height: 330px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -4623,4 +4615,83 @@ body {
     border-left: 10px solid #003a70 !important;
     border-right: 10px solid #003a70 !important;
 
+}
+
+.sizeCarousel {
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.mouseProperties{
+    cursor: pointer;
+}
+.bg-orange-ui{
+    background: #FF4500;
+}
+.imgprop{
+    width: 100%;
+    height: 80%;
+}
+.customrow{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    height: 10%;
+}
+.rowdate{
+    background: #FFA500 !important;
+}
+.rowinfo{
+    background: #FF4500 !important;
+}
+.textInfoProp{
+    color: white !important;
+}
+.paddingbottom5{
+    padding-bottom: 5px;
+}
+.paddingtop5{
+    padding-top: 5px;
+}
+.carIndic{
+    bottom: -2% !important;
+}
+.btnVermelho{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    height: 40px;
+    width: 30%;
+}
+.btnVerde{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    height: 40px;
+    width: 30%;
+}
+.btnVermelho:hover{
+    background-color: #e25664;
+    border-color: #e25664;
+
+}
+.btnVerde:hover{
+    background-color: #30c752;
+    border-color: #30c752;
+}
+.buttonprop{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
