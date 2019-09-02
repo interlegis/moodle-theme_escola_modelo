@@ -191,38 +191,74 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
             {{#cursos_home}}
-                <div class="carousel-item item">
-                {{#.}} <!-- lista principal -->
-                    {{#.}} <!-- lista de blocos -->
-                        <div style="width: 33%; position: relative; display: inline-block; height: 420px">
-                            <div class="positionImgCourses">
-                                <div class="row customrow " style="width: 100%;">
-                                    <div style="width: 50%;" class="rowdate textInfoProp paddingtop5">
-                                        10 de Agosto
-                                    </div>
-                                    <div style="width: 50%;" class="">
-                                    </div>
-                                </div>
-                                <img class="d-block imgprop" src="https://www.senado.leg.br/atividade/plenario/ordemdodia/Img/brasaoColorDeg.png" alt="First slide">
-                                <div class="row customrow " style="width: 100%;">
-                                    <div style="width: 50%;">
-                                    </div>
-                                    <a class="mouseProperties paddingtop5 rowinfo textInfoProp" style="width: 50%" data-toggle="modal" data-target="#exampleModalLong">
-                                        <div>
-                                             Mais Informações
+                <div class="carousel-item item textAlignCenter">
+                    <div class="" >
+                        {{#.}} <!-- lista principal -->
+                            {{#.}} <!-- lista de blocos -->
+                                <div class="item-box-blog tam3cards noPadding marginResponsive">
+                                    <div class="w100p" style="position: absolute">
+                                        <div class="w50p float-left">
                                         </div>
-                                    </a>
+                                        <div class="w50p float-right">
+                                            <div class="colorDarkGrey white"> <span class="mon">20 de Agosto</span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="imgCourseTst">
+                                            <img class="imgCourseTst" src="https://saberes.senado.leg.br/pluginfile.php/2593044/course/overviewfiles/Conhecendo%20o%20Novo%20Acordo%20Ortogr%C3%A1fico-min.png">
+                                        </div>
+                                        <div class="w100p" style="position: absolute">
+                                            <div class="w50p float-left">
+                                                <div class="blueMaisInfo white sizeHeight"> <span class="mon">Mais Informações</span> </div>
+                                            </div>
+                                            <div class="w50p float-right">
+                                                <div class="greenInscrever white sizeHeight"> <span class="mon">Inscrever-se</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="positionBgCourses">
-                                <h4 class="label-style h4CoursesProperties " data-toggle="tooltip" data-placement="top" title="{{{descricao}}}">{{{nome}}}</h4>
-                            </div>
-                        </div>
-                    {{/.}}
-                {{/.}}
-            </div>
+                            {{/.}}
+                        {{/.}}
+                    </div>
+                </div>
             {{/cursos_home}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <!-- Modal -->
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -241,77 +277,18 @@
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only redd">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next " href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="sr-only redd">Next</span>
         </a>
     </div>
 
 
 
-
-
-
-
-
-
-    <!--
-
-
-    <div class="container cta-100">
-        <div class="container">
-          <div class="row blog">
-            <div class="col-md-12">
-              <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
-
-                <ol class="carousel-indicators">
-                  <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#blogCarousel" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row">
-                        {{#cursos_home}}
-                            //<h4>{{{nome}}}</h4>
-                            {{#cursos}}
-                            <div class="col-md-4" >
-                                <div class="item-box-blog">
-                                <div class="item-box-blog-image">
-                                    <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">20 de Agosto</span> </div>
-                                    <figure> <img alt="" src="{{{logo}}}"> </figure>
-                                </div>
-                                <div class="item-box-blog-body">
-                                    <div class="item-box-blog-heading">
-                                    <a href="#" tabindex="0">
-                                        <h5>{{{nome}}}</h5>
-                                    </a>
-                                    </div>
-                                    <div class="item-box-blog-data" style="padding: 15px;">
-                                    <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(3)</p>
-                                    </div>
-                                    <div class="item-box-blog-text">
-                                    <p>{{{descricao}}}</p>
-                                    </div>
-                                    <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Ler Mais</a> </div>
-                                </div>
-                                </div>
-                            </div>
-                            {{/cursos}}
-                        {{/cursos_home}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    -->
     <!-- Cursos disponíveis -->
     <section class="section-tours" id="courses">
         <div class=" text-center  u-margin-bottom-medium" style="margin-bottom: 40px;">

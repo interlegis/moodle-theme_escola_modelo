@@ -1,13 +1,87 @@
 
 @charset "UTF-8";
 
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2019 Daniel Eden
- */
+
+@media screen and
+(min-width: 200px) and
+(max-width: 468px) {
+
+    .tam3cards{
+        width: 70% !important;
+    }
+    .imgCourseTst{
+        width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .marginResponsive{
+        margin-bottom: 10px !important;
+    }
+
+}
+@media screen and
+(min-width: 469px) and
+(max-width: 768px) {
+
+    .tam3cards{
+        width: 70% !important;
+    }
+    .imgCourseTst{
+        width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .marginResponsive{
+        margin-bottom: 10px !important;
+    }
+
+}
+@media screen and
+(min-width: 769px) and
+(max-width: 968px) {
+
+    .tam3cards{
+        width: 70% !important;
+    }
+    .imgCourseTst{
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .marginResponsive{
+        margin-bottom: 10px !important;
+    }
+
+}
+@media screen and
+(min-width: 969px) and
+(max-width: 1200px) {
+
+    .tam3cards{
+        width: 70% !important;
+    }
+    .imgCourseTst{
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .marginResponsive{
+        margin-bottom: 10px !important;
+    }
+
+}
+@media screen and
+(min-width: 1201px) and
+(max-width: 1350px) {
+
+
+}
+
+
 
 @-webkit-keyframes bounce {
     from,
@@ -4269,7 +4343,7 @@ input, button
 #cover
 {
     width: 85%;
-    padding: 35px;
+    padding: 5px;
     margin: -83px auto 0 auto;
       background-image: linear-gradient(to right bottom, rgba(0, 4, 40, 0.85), rgba(0, 78, 146, 0.85));
     border-radius: 20px;
@@ -4313,7 +4387,7 @@ button
 #s-circle
 {
     position: relative;
-    top: -8px;
+    top: -20px;
     left: 0;
     width: 43px;
     height: 43px;
@@ -4328,8 +4402,8 @@ button
 button span
 {
     position: absolute;
-    top: 68px;
-    left: 43px;
+    top: 50px;
+    left: 26px;
     display: block;
     width: 45px;
     height: 15px;
@@ -4618,7 +4692,7 @@ body {
 }
 
 .sizeCarousel {
-    width: 70% !important;
+    width: 90% !important;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -4653,7 +4727,7 @@ body {
     padding-top: 5px;
 }
 .carIndic{
-    bottom: -2% !important;
+    bottom: -15% !important;
 }
 .btnVermelho{
     color: #fff;
@@ -4694,4 +4768,257 @@ body {
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cta-100 {
+    margin-top: 100px;
+    padding-left: 8%;
+    padding-top: 7%;
+}
+.col-md-4{
+    padding-bottom:20px;
+}
+
+.white {
+    color: #fff !important;
+}
+.mt{float: left;margin-top: -20px;padding-top: 20px;}
+.bg-blue-ui {
+    background-color: #708198 !important;
+}
+figure img{width:300px;}
+
+#blogCarousel {
+    padding-bottom: 100px;
+}
+
+.blog .carousel-indicators {
+    left: 0;
+    top: -50px;
+    height: 50%;
+}
+
+
+/* The colour of the indicators */
+
+.blog .carousel-indicators li {
+    background: #708198;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+    background: #0fc9af;
+}
+.item-carousel-blog-block {
+    outline: medium none;
+    padding: 15px;
+}
+
+.item-box-blog {
+    border: 1px solid #dadada;
+    text-align: center;
+    z-index: 4;
+    padding: 20px;
+}
+
+.item-box-blog-image {
+    position: relative;
+}
+
+.item-box-blog-image figure img {
+    width: 100%;
+    height: auto;
+}
+
+.item-box-blog-date {
+    position: absolute;
+    z-index: 5;
+    padding: 4px 20px;
+    top: -20px;
+    right: 8px;
+    background-color: #41cb52;
+}
+
+.item-box-blog-date span {
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.item-box-blog-date span.mon {
+    font-size: 18px;
+}
+
+.item-box-blog-date span.day {
+    font-size: 16px;
+}
+
+.item-box-blog-body {
+    padding: 10px;
+}
+
+.item-heading-blog a h5 {
+    margin: 0;
+    line-height: 1;
+    text-decoration:none;
+    transition: color 0.3s;
+}
+
+.item-box-blog-heading a {
+    text-decoration: none;
+}
+
+.item-box-blog-data p {
+    font-size: 13px;
+}
+
+.item-box-blog-data p i {
+    font-size: 12px;
+}
+
+.item-box-blog-text {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.mt-10 {
+    float: left;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read {
+    cursor: pointer;
+    padding: 4px 20px;
+    float: left;
+    margin-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read:hover {
+    box-shadow: 0px 5px 15px inset #4d5f77;
+}
+.tam3cards{
+    width: 30%;
+    position: relative;
+    display: inline-block;
+    height: 260px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+.w100p{
+    width: 100%;
+}
+.w50p{
+    width: 50%;
+}
+.noPadding{
+    padding: 0 !important;
+}
+.titleproperties{
+    padding: 2%;
+}
+.textTitleProperties{
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+}
+.imgCourseProp{
+    width: 90%;
+    height: 250px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.imgCourseTst{
+    width: 100%;
+    height: 230px;
+}
+.rowbuttons{
+    padding-top: 2%;
+}
+.colorDarkGrey{
+    background: #424242 !important;
+    color: white !important;
+}
+.bgGreyCustom{
+    background: rgb(242,242,242);
+    background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(245,245,245,0.5970763305322129) 18%, rgba(240,240,240,0.639093137254902) 64%, rgba(241,241,241,0.4654236694677871) 100%);
+}
+.greenInscrever{
+    background: #2aad2a !important;
+}
+.greenInscrever:hover{
+    background: #2ebd2e !important;
+}
+.blueMaisInfo{
+    background: #aeae2a !important;
+
+}
+.blueMaisInfo:hover{
+     background: #bebe2e !important;
+ }
+.sizeHeight{
+    height: 30px !important;
+}
+.redd{
+    color: black !important;
+    background: red !important;
+}
+.textAlignCenter{
+    text-align: center;
+}
+.carousel-indicators li{
+    background-color: black !important;
 }
