@@ -4769,56 +4769,6 @@ body {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cta-100 {
     margin-top: 100px;
     padding-left: 8%;
@@ -4996,18 +4946,21 @@ figure img{width:300px;}
     background: rgb(242,242,242);
     background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(245,245,245,0.5970763305322129) 18%, rgba(240,240,240,0.639093137254902) 64%, rgba(241,241,241,0.4654236694677871) 100%);
 }
-.greenInscrever{
-    background: #2aad2a !important;
+.colorInscrever{
+    background: #00305c !important;
 }
-.greenInscrever:hover{
-    background: #2ebd2e !important;
+.colorInscrever:hover{
+    background: #00305c !important;
+    cursor: pointer;
 }
-.blueMaisInfo{
-    background: #aeae2a !important;
+.colorMaisInfo{
+    background: #e6e600 !important;
+    color: black !important;
 
 }
-.blueMaisInfo:hover{
-     background: #bebe2e !important;
+.colorMaisInfo:hover{
+     background: #e6e600 !important;
+    cursor: pointer;
  }
 .sizeHeight{
     height: 30px !important;
@@ -5021,4 +4974,11 @@ figure img{width:300px;}
 }
 .carousel-indicators li{
     background-color: black !important;
+}
+.paddingg{
+    padding: 3px;
+}
+.sizePassingModal{
+    width: 6% !important;
+    background: #DEDEDE;
 }
