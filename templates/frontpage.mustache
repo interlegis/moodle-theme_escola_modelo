@@ -40,10 +40,8 @@
 <!-- Placeholders do template: não remover!!-->
 <!-- {{{ output.course_content_header }}} -->
 <!-- {{{ output.main_content }}}          -->
-
 <!-- {{{ output.course_content_footer }}} -->
 {{{ output.doctype }}}
-
 <html {{{ output.htmlattributes }}}>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -58,7 +56,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>{{{casalegislativa_nome}}}</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" type="text/css" href="{{moodle_url}}/theme/escola_modelo/style/frontpage.css">
     <script src="{{moodle_url}}/theme/escola_modelo/js/frontpage.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -68,12 +65,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-
-
 </head>
-
 <body {{{ bodyattributes }}}>
-
     <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0px;">
         <div class="container">
             <div class="navbar-translate">
@@ -114,7 +107,6 @@
             </div>
         </div>
     </nav>
-
     <nav class="navbar navbar-inverse navbar-expand-lg bg-dark smallScreen" id="navSmall" style="margin-bottom: 0px;">
         <div class="container customMarginLogoSmallScreen noMargin maxWidth">
             <div class="navbar-translate widthLogo">
@@ -145,7 +137,6 @@
             </div>
         </div>
     </nav>
-
     <div class="bgGradient">
 	    <div id="particles">
 		    <div id="webcoderskull">
@@ -196,7 +187,6 @@
     </div>
     {{/avisos}}
     <!-- Cursos mais procurados -->
-
     <div id="mostViewed">
 		<br>
 		<br>
@@ -330,7 +320,6 @@
                                         <label for="1-star" class="star">&#9733;</label>
                                         </div>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
@@ -352,7 +341,6 @@
                 {{/cursos_home}}
         </div>
     </section>
-
     <!--
     <footer class="footer text-center bg-dark">
         <p class="textColorWhite">Tema Escola Modelo <a href="http://www.interlegis.leg.br/" style="text-decoration: none;"><p class="littleTitle">Interlegis - 2019 Copyright - All Rights Reserved Terms of Service</p></a></p>
@@ -361,32 +349,25 @@
     {{>theme_escola_modelo/footer}}
 </body>
 </html>
-
 <script>
-
     function exibirInformacoes(informacao){
         jQuery.noConflict();
         $('#textoMaisInformacoes').html(informacao);
         $('#modalInformacoes').modal('show');
     }
-
     $(document).ready(function() {
         $('.item').first().addClass("active", "true");
         $('.aviso').first().addClass("active", "true");
     });
-
     function MudarEstado(el) {
         var display = document.getElementById(el).style.display;
         if (display == "none")
             document.getElementById(el).style.display = 'block';
     }
-
     $( "#formPesquisa" ).submit(function( event ) {
         event.preventDefault();
-
         var form = $(this);
         var url = "{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php";
-
         $.ajax({
             type: "POST",
             url: url,
@@ -443,12 +424,9 @@
                                 </div>
                             </div>
                             `;
-
                         $("#cursosDisponiveis").append(curso);
-
                     });
                 }
-
                 //alert(data.cursos); // show response from the php script.
             },
             error: function(e) {
@@ -456,7 +434,6 @@
             }
         });
     });
-
 </script>
 {{#js}}
 require(['theme_boost/loader']);
