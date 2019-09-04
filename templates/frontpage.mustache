@@ -74,7 +74,7 @@
 
 <body {{{ bodyattributes }}}>
 
-    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0px;">
         <div class="container">
             <div class="navbar-translate">
                 <label class="nav-item navbar-brand" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
@@ -105,10 +105,8 @@
                         <a href="#cover" class="nav-link">
                         <img src="https://img.icons8.com/dusk/64/000000/search.png" style="width: 20px;"></a>
                     </li>
-
-
                     <li class="nav-item">
-                        <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="btn btn-rose btn-raised btn-round">
+                        <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
                             Log In
                         </a>
                     </li>
@@ -117,10 +115,41 @@
         </div>
     </nav>
 
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark smallScreen" id="navSmall" style="margin-bottom: 0px;">
+        <div class="container customMarginLogoSmallScreen noMargin maxWidth">
+            <div class="navbar-translate widthLogo">
+                <label class="nav-item navbar-brand noMargin" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+            </div>
+            <div class="pull-right widthContent">
+                <div class="pull-right mr2p">
+                    <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
+                    Log In
+                    </a>
+                </div>
+                <div class="dropdown pull-right mr5p">
+                   <img id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 50px" src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/menu-256.png">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a href="#news" class="nav-link propertiesLinkNav">
+                            Comunicados
+                        </a>
+                        <a href="#mostViewed" class="nav-link propertiesLinkNav">
+                            Mais Procurados
+                        </a>
+                        <a href="#courses" class="nav-link propertiesLinkNav">
+                             Cursos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-right">
+            </div>
+        </div>
+    </nav>
+
     <div class="bgGradient">
 	    <div id="particles">
 		    <div id="webcoderskull">
-		        <h1>{{{sitename}}}</h1>
+		        <h1 class="">{{{sitename}}}</h1>
 		        <p class="littleSubtitle">{{{casalegislativa_nome}}}</p>
 		    </div>
 	    </div>
@@ -131,13 +160,12 @@
         <div class="">
             <div class="row mb-5 propertiesNews">
                 <div class="col-12 py-4 bg-dark">
-                    <div class="row">
+                    <div class="row paddingSmall">
                         <div style="width: 100%">
                             <div class="breaking-box">
                                 <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         {{#noticias}}
-
                                         <div class="carousel-item aviso">
                                             <a href="{{{link}}}">
                                                 <span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >{{{tag}}}</span>
@@ -146,10 +174,9 @@
                                             <img src="{{{icone}}}" style="width: 20px;"> {{{titulo}}}
                                             </a>
                                         </div>
-
                                         {{/noticias}}
                                     </div>
-                                    <div class="navigation-box p-2 d-none d-sm-block">
+                                    <div class="navigation-box p-2 d-sm-block">
                                         <a class="carousel-control-prev colorNext" href="#carouselbreaking" role="button" data-slide="prev">
                                             <i class="fa fa-angle-left" aria-hidden="true"></i>
                                             <span class="sr-only">Previous</span>
@@ -201,9 +228,9 @@
                                         </div>
                                         <div class="w100p" style="position: absolute">
                                             <div class="w50p float-left">
-                                                <a data-backdrop="static" href="javascript:exibirInformacoes('{{descricao}}')" data-target="#exampleModalLong">
+                                                <a class="noLinkEffect" data-backdrop="static" href="javascript:exibirInformacoes('{{descricao}}')" data-target="#exampleModalLong">
                                                      <div class="colorMaisInfo white sizeHeight paddingg">
-                                                         <span class="mon">Mais Informações</span>
+                                                         <span class="mon">Informações</span>
                                                      </div>
                                                 </a>
                                             </div>
@@ -221,14 +248,17 @@
             <div data-backdrop="static" class="modal fade" id="modalInformacoes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Mais Informações</h5>
+
+                        <div class="modal-header padding2p">
+                            <h5 class="modal-title w100p">Mais Informações</h5>
+                            <div class="rowClose">
+                                <img data-dismiss="modal" class="xProperties" src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Close-256.png">
+                            </div>
                         </div>
                         <div id="textoMaisInformacoes" class="modal-body">
                         </div>
                         <div class="modal-footer row customrow">
-                            <button type="button" class="buttonprop btnVermelho" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="buttonprop btnVerde">Inscrever</button>
+                            <button type="button" class="buttonprop btnVerde btn-block">Inscrever</button>
                         </div>
                     </div>
                 </div>

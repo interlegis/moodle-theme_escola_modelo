@@ -2,6 +2,37 @@
 @media screen and
 (min-width: 200px) and
 (max-width: 468px) {
+    .tam3cards{
+        width: 95% !important;
+    }
+    .imgCourseTst{
+        width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .marginResponsive{
+        margin-bottom: 10px !important;
+    }
+    .bigScreen {
+        display: none !important;
+    }
+    .smallScreen {
+        display: block !important;
+    }
+    #webcoderskull h1{
+        font-size: 2rem !important;
+    }
+    .paddingSmall {
+        padding: 5% !important;
+    }
+    .carousel-inner {
+        width: 90% !important;
+    }
+}
+@media screen and
+(min-width: 469px) and
+(max-width: 679px) {
 
     .tam3cards{
         width: 70% !important;
@@ -15,10 +46,25 @@
     .marginResponsive{
         margin-bottom: 10px !important;
     }
-
+    .bigScreen {
+        display: none !important;
+    }
+    .smallScreen {
+        display: block !important;
+    }
+    #webcoderskull h1{
+        font-size: 3rem !important;
+    }
+    .paddingSmall {
+        padding: 5% !important;
+    }
+    .carousel-inner {
+        width: 90% !important;
+    }
 }
+
 @media screen and
-(min-width: 469px) and
+(min-width: 680px) and
 (max-width: 768px) {
 
     .tam3cards{
@@ -33,7 +79,12 @@
     .marginResponsive{
         margin-bottom: 10px !important;
     }
-
+    .bigScreen {
+        display: none !important;
+    }
+    .smallScreen {
+        display: block !important;
+    }
 }
 @media screen and
 (min-width: 769px) and
@@ -51,10 +102,27 @@
     .marginResponsive{
         margin-bottom: 10px !important;
     }
+    .bigScreen {
+        display: none !important;
+    }
+    .smallScreen {
+        display: block !important;
+    }
 
 }
 @media screen and
 (min-width: 969px) and
+(max-width: 991px) {
+    .bigScreen {
+        display: none !important;
+    }
+    .smallScreen {
+        display: block !important;
+    }
+}
+
+@media screen and
+(min-width: 992px) and
 (max-width: 1200px) {
 
     .tam3cards{
@@ -69,12 +137,24 @@
     .marginResponsive{
         margin-bottom: 10px !important;
     }
-
+    .smallScreen{
+        display: none !important;
+    }
 }
 @media screen and
 (min-width: 1201px) and
 (max-width: 1350px) {
+    .smallScreen{
+        display: none !important;
+    }
+}
 
+@media screen and
+(min-width: 1351px) and
+(max-width: 4080px) {
+    .smallScreen{
+        display: none !important;
+    }
 }
 html *{
     -webkit-font-smoothing: antialiased;
@@ -197,24 +277,62 @@ color: black;
 .btn.btn-round{
     border-radius:30px;
 }
-.btn.btn-rose{
+
+.btnCustom {
+    border-radius: 30px !important;
+    height: 40px;
+    padding: 12px 30px !important;
+    margin: .3125rem 1px;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 0;
+    outline: 0;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    will-change: box-shadow,transform;
+    border-color: #ccc;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    position: relative;
+    border-radius: 30px;
+}
+.btn-blueInterlegis{
     color: #fff;
     background-color: #00305c;
     border-color:#00305c;
-
-
 }
 
-.btn.btn-rose:hover{
+.btn-blueInterlegis:hover{
     color: #fff;
     background-color: #003a70;
     border-color: #003a70;
 }
 
-.btn.btn-rose:focus{
+.btn-blueInterlegis:focus{
     color: #fff;
     background-color: #003a70;
     border-color: #003a70;
+}
+.btn-dropdownNav{
+    color: #fff;
+    background-color: white;
+    border-color:#00305c;
+    border-radius:30px !important;
+    height: 40px;
+    width: 100%;
+}
+
+.btn-dropdownNav:hover{
+    color: #fff;
+    background-color: whitesmoke;
+}
+.btn-dropdownNav:focus{
+    color: #fff;
+    background-color: white
 }
 
 .btn.btn-white{
@@ -306,6 +424,7 @@ canvas{
   font-weight: bold;
   text-shadow: 3px 4px 2px rgba(125,125,125,0.71);
 }
+
 .textColorWhite{
     color: white;
 }
@@ -1128,6 +1247,17 @@ body {
     background-color: #30c752;
     border-color: #30c752;
 }
+.btnDropdown{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    height: 40px;
+    width: 100%;
+}
+.btnDropdown:hover{
+    background-color: #30c752;
+    border-color: #30c752;
+}
 .buttonprop{
     display: inline-block;
     font-weight: 400;
@@ -1357,4 +1487,57 @@ figure img{width:300px;}
 .sizePassingModal {
     width: 6% !important;
     background: #DEDEDE;
+}
+.bigScreen {
+    display: block;
+}
+.smallScreen {
+    display: none;
+}
+.customMarginLogoSmallScreen {
+    margin-left: 5% !important;
+    margin-bottom: 0 !important;
+}
+.noMargin {
+    margin: 0 !important;
+}
+.maxWidth {
+    max-width: 100% !important;
+}
+.widthLogo {
+    width: 20%;
+    text-align: center;
+}
+.widthContent {
+    width: 80%;
+    text-align: right !important;
+}
+.mr2p{
+    margin-right: 2% !important;
+}
+.mr5p{
+    margin-right: 5% !important;
+}
+.dropdown-menu {
+    left: -65% !important;
+}
+.propertiesLinkNav{
+    color: black !important;
+}
+.xProperties {
+    width: 24px;
+    cursor: pointer;
+}
+.rowClose {
+    width: 50%;
+    text-align: right;
+}
+.padding2p{
+    padding: 2%;
+}
+.modal-content .modal-footer {
+    padding: 2% !important;
+}
+.noLinkEffect{
+    text-decoration: none !important;
 }
