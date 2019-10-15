@@ -107,9 +107,17 @@
 
 
                     <li class="nav-item">
+                        
+                        {{#user_picture_url}}
+                            Foto do sujeito e Nome {{{user_name}}} <br> 
+                            {{{user_picture_url}}}
+
+                        {{/user_picture_url}}
+                        {{^user_picture_url}}
                         <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="btn btn-rose btn-raised btn-round">
                             Log In
                         </a>
+                        {{/user_picture_url}}
                     </li>
                 </ul>
             </div>

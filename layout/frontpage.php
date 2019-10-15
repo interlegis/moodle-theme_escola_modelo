@@ -133,14 +133,15 @@ if (isloggedin()) {
 	$hasblocks = strpos($blockshtml, 'data-block=') !== false;
 	$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 
-	//$user_picture = false;
-	//if ($user->picture) {
-	//$user_picture = get_file_url($USER->id.'/'.$size['large'].'.jpg', null, 'user');
-	//}
+	// $user_picture = false;
+	// if ($user->picture) {
+	// 	$user_picture = get_file_url($USER->id.'/'.$size['large'].'.jpg', null, 'user');
+	// }
 	global $USER,$PAGE;
 	$user_picture=new user_picture($USER);
 	$user_picture_url=$user_picture->get_url($PAGE);
 	$user_profile_url=$CFG->wwwroot . "/user/profile.php?id=" . $USER->id . "&course=1";
+	$user_name = $USER->firstname; // . ' ' . $USER->lastname;
 
 
 //var obj = JSON.parse($response->data);
@@ -190,7 +191,9 @@ if (isloggedin()) {
 		'cursos_home' => $cursosHome,
 		'central_autenticacao_url' => $central_autenticacao_url,
 		'session' => sesskey(),
-		'avisos' => $avisosHome
+		'avisos' => $avisosHome,
+		'user_picture_url' => $user_picture_url,
+		'user_name' => $user_name
 	];
 
 // Descobrir quais categorias de curso estão disponíveis para serem exibidas
@@ -239,7 +242,9 @@ if (isloggedin()) {
 		'cursos_home' => $cursosHome,
 		'central_autenticacao_url' => $central_autenticacao_url,
 		'session' => sesskey(),
-		'avisos' => $avisosHome
+		'avisos' => $avisosHome,
+		'user_picture_url' => '',
+		'user_name' => ''
 	];
 }
 
