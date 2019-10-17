@@ -67,10 +67,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body {{{ bodyattributes }}}>
-    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0; padding: 0 !important;">
         <div class="container">
             <div class="navbar-translate">
-                <label class="nav-item navbar-brand" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+                <label class="nav-item navbar-brand" style="margin-bottom: 0rem !important;" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></label>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
@@ -79,29 +79,41 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#cover" class="nav-link corIconNav">
+                            <i class="fa fa-search-plus fontSize26 marginIcon "></i>Pesquisar
+                        </a>
+                    </li>
                 	<li class="nav-item">
-                        <a href="#news" class="nav-link blackk">
-                            <img src="https://img.icons8.com/dusk/64/000000/news.png" style="width: 20px;">  Comunicados
+                        <a href="#news" class="nav-link corIconNav">
+                            <i class="fa fa-newspaper-o fontSize26 marginIcon "></i>Comunicados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#mostViewed" class="nav-link blackk">
-                            <img src="https://img.icons8.com/dusk/64/000000/best-seller.png" style="width: 20px;"> Mais Procurados
+                        <a href="#mostViewed" class="nav-link corIconNav">
+                            <i class="fa fa-bar-chart fontSize26 marginIcon "></i> Mais Procurados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#courses" class="nav-link blackk">
-                            <img src="https://img.icons8.com/dusk/64/000000/book.png" style="width: 20px;"> Cursos
+                        <a href="#courses" class="nav-link corIconNav">
+                            <i class="fa fa-book fontSize26 marginIcon "></i> Cursos
                         </a>
                     </li>
-					<li class="nav-item">
-                        <a href="#cover" class="nav-link ">
-                        <img src="https://img.icons8.com/dusk/64/000000/search.png" style="width: 20px;"></a>
-                    </li>
+
                     <li class="nav-item">
+                        <div class="nav-link customPaddingUser">
+                            <div class="customSpaceUser" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user fontSize26 "></i>  Ancelmo
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"> <i class="fa fa-sign-out fontSize26 marginIcon "></i> Sair</a>
+                            </div>
+                        </div>
+                        <!--
                         <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
                             Log In
                         </a>
+                        -->
                     </li>
                 </ul>
             </div>
@@ -110,25 +122,36 @@
     <nav class="navbar navbar-inverse navbar-expand-lg bg-dark smallScreen" id="navSmall" style="margin-bottom: 0px;">
         <div class="container customMarginLogoSmallScreen noMargin maxWidth">
             <div class="navbar-translate widthLogo">
-                <label class="nav-item navbar-brand noMargin" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+                <label class="nav-item navbar-brand noMargin" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></label>
             </div>
             <div class="pull-right widthContent">
                 <div class="pull-right mr2p">
+
+                    <div class="nav-link customPaddingUser">
+                        <div class="customSpaceUser">
+                            <i class="fa fa-user fontSize26 "></i>  Ancelmo
+                        </div>
+                    </div>
+                    <!--
                     <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
                     Log In
                     </a>
+                    -->
                 </div>
-                <div class="dropdown pull-right mr5p">
-                   <img id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 50px" src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/menu-256.png">
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown pull-right iconPropertiesAlign">
+                    <i class="fa fa-reorder fa-3x marginIcon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                    <div class="dropdown-menu tamanhoDropdown" aria-labelledby="dropdownMenuButton">
                         <a href="#news" class="nav-link propertiesLinkNav">
-                            Comunicados
+                            <i class="fa fa-newspaper-o fontSize26 marginIcon "></i>Comunicados
                         </a>
                         <a href="#mostViewed" class="nav-link propertiesLinkNav">
-                            Mais Procurados
+                            <i class="fa fa-bar-chart fontSize26 marginIcon "></i> Mais Procurados
                         </a>
                         <a href="#courses" class="nav-link propertiesLinkNav">
-                             Cursos
+                            <i class="fa fa-book fontSize26 marginIcon "></i> Cursos
+                        </a>
+                        <a href="#" class="nav-link propertiesLinkNav">
+                            <i class="fa fa-sign-out fontSize26 marginIcon "></i> Sair
                         </a>
                     </div>
                 </div>
@@ -276,7 +299,7 @@
         <div id="cover">
             <form name='formPesquisa' id='formPesquisa' method="POST" action="{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php">
                 <div class="tb">
-                    <input type="text" required name='expression'>
+                    <input type="text" required name='expression' class="inputPropertiesSelect">
                     <div class="td">
                     <input type="hidden" required name='schooxl' value='SAB'>
                     </div>
