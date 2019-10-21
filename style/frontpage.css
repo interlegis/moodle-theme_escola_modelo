@@ -1449,7 +1449,7 @@ figure img {
     margin-right: 5% !important;
 }
 .dropdown-menu {
-    left: -65% !important;
+    left: -70% !important;
 }
 .propertiesLinkNav {
     color: black !important;
@@ -1473,4 +1473,40 @@ figure img {
 }
 .blackk {
     color: black !important;
+}
+.inputPropertiesSelect {
+    border-radius: 60px;
+    height: 85px !important;
+}
+.fontSize26 {
+    font-size: 26px !important;
+}
+.marginIcon {
+    margin-right: 8px !important;
+}
+.corIconNav {
+    color: black !important;
+}
+.corIconNav:hover {
+    color: #808080 !important;
+}
+.customPaddingUser {
+    padding: 7px !important;
+}
+.customSpaceUser {
+    background: #292F33;
+    padding: 8px;
+    border-radius: 30px;
+    color: white;
+}
+.customSpaceUser:hover {
+    background: #434d54;
+    cursor: pointer;
+}
+.tamanhoDropdown {
+    min-width: 230px !important;
+}
+.iconPropertiesAlign {
+    height: 60px;
+    padding: 7px !important;
 }

@@ -55,7 +55,7 @@
     <meta name="theme-color" content="#00305c" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>{{{casalegislativa_nome}}}</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{moodle_url}}/theme/escola_modelo/style/frontpage.css">
     <script src="{{moodle_url}}/theme/escola_modelo/js/frontpage.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -67,10 +67,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body {{{ bodyattributes }}}>
-    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0; padding: 0 !important;">
         <div class="container">
             <div class="navbar-translate">
-                <label class="nav-item navbar-brand" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+                <label class="nav-item navbar-brand" style="margin-bottom: 0rem !important;" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></label>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
@@ -79,37 +79,40 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#cover" class="nav-link corIconNav">
+                            <i class="fa fa-search-plus fontSize26 marginIcon "></i>Pesquisar
+                        </a>
+                    </li>
                 	<li class="nav-item">
-                        <a href="#news" class="nav-link blackk">
-                            <img src="https://img.icons8.com/dusk/64/000000/news.png" style="width: 20px;">  Comunicados
+                        <a href="#news" class="nav-link corIconNav">
+                            <i class="fa fa-newspaper-o fontSize26 marginIcon "></i>Comunicados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#mostViewed" class="nav-link blackk">
-                            <img src="https://img.icons8.com/dusk/64/000000/best-seller.png" style="width: 20px;"> Mais Procurados
+                        <a href="#mostViewed" class="nav-link corIconNav">
+                            <i class="fa fa-bar-chart fontSize26 marginIcon "></i> Mais Procurados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#courses" class="nav-link blackk">
-                            <img src="https://img.icons8.com/dusk/64/000000/book.png" style="width: 20px;"> Cursos
+                        <a href="#courses" class="nav-link corIconNav">
+                            <i class="fa fa-book fontSize26 marginIcon "></i> Cursos
                         </a>
                     </li>
-					<li class="nav-item">
-                        <a href="#cover" class="nav-link ">
-                        <img src="https://img.icons8.com/dusk/64/000000/search.png" style="width: 20px;"></a>
-                    </li>
-                    <li class="nav-item">
-                        
-                        {{#user_picture_url}}
-                            Foto do sujeito e Nome {{{user_name}}} <br> 
-                            {{{user_picture_url}}}
 
-                        {{/user_picture_url}}
-                        {{^user_picture_url}}
-                        <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="btn btn-rose btn-raised btn-round">
+                    <li class="nav-item">
+                        <div class="nav-link customPaddingUser">
+                            <div class="customSpaceUser" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user fontSize26 "></i>  Ancelmo
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"> <i class="fa fa-sign-out fontSize26 marginIcon "></i> Sair</a>
+                            </div>
+                        </div>
+                        <!--
+                        <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
                             Log In
                         </a>
-                        {{/user_picture_url}}
                     </li>
                 </ul>
             </div>
@@ -118,25 +121,36 @@
     <nav class="navbar navbar-inverse navbar-expand-lg bg-dark smallScreen" id="navSmall" style="margin-bottom: 0px;">
         <div class="container customMarginLogoSmallScreen noMargin maxWidth">
             <div class="navbar-translate widthLogo">
-                <label class="nav-item navbar-brand noMargin" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+                <label class="nav-item navbar-brand noMargin" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></label>
             </div>
             <div class="pull-right widthContent">
                 <div class="pull-right mr2p">
+
+                    <div class="nav-link customPaddingUser">
+                        <div class="customSpaceUser">
+                            <i class="fa fa-user fontSize26 "></i>  Ancelmo
+                        </div>
+                    </div>
+                    <!--
                     <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
                     Log In
                     </a>
+                    -->
                 </div>
-                <div class="dropdown pull-right mr5p">
-                   <img id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 50px" src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/menu-256.png">
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown pull-right iconPropertiesAlign">
+                    <i class="fa fa-reorder fa-3x marginIcon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                    <div class="dropdown-menu tamanhoDropdown" aria-labelledby="dropdownMenuButton">
                         <a href="#news" class="nav-link propertiesLinkNav">
-                            Comunicados
+                            <i class="fa fa-newspaper-o fontSize26 marginIcon "></i>Comunicados
                         </a>
                         <a href="#mostViewed" class="nav-link propertiesLinkNav">
-                            Mais Procurados
+                            <i class="fa fa-bar-chart fontSize26 marginIcon "></i> Mais Procurados
                         </a>
                         <a href="#courses" class="nav-link propertiesLinkNav">
-                             Cursos
+                            <i class="fa fa-book fontSize26 marginIcon "></i> Cursos
+                        </a>
+                        <a href="#" class="nav-link propertiesLinkNav">
+                            <i class="fa fa-sign-out fontSize26 marginIcon "></i> Sair
                         </a>
                     </div>
                 </div>
@@ -153,9 +167,7 @@
 		    </div>
 	    </div>
     </div>
-
     <!-- Notícias -->
-
     {{#avisos}}
     <div id="news">
         <div class="">
@@ -167,7 +179,6 @@
                                 <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         {{#noticias}}
-
                                         <div class="carousel-item aviso">
                                             <a href="{{{link}}}">
                                                 <span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >{{{tag}}}</span>
@@ -176,7 +187,6 @@
                                             <img src="{{{icone}}}" style="width: 20px;"> {{{titulo}}}
                                             </a>
                                         </div>
-
                                         {{/noticias}}
                                     </div>
                                     <div class="navigation-box p-2 d-sm-block">
@@ -198,9 +208,7 @@
         </div>
     </div>
     {{/avisos}}
-
     <!-- Cursos mais procurados -->
-
     <div id="mostViewed">
 		<br>
 		<br>
@@ -290,7 +298,7 @@
         <div id="cover">
             <form name='formPesquisa' id='formPesquisa' method="POST" action="{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php">
                 <div class="tb">
-                    <input type="text" required name='expression'>
+                    <input type="text" required name='expression' class="inputPropertiesSelect">
                     <div class="td">
                     </div>
                     <div class="td" id="s-cover">
@@ -302,13 +310,10 @@
                 </div>
             </form>
         </div>
-
         <div id='cursosDisponiveis' class="roww">
-
                 {{#cursos_home}}
                 {{#categorias}}
                 {{#categoria}}
-
                     <!--<h4>{{{nome}}}</h4> -->
                     {{#cursos}}
                     <div class="card cardProp">
@@ -336,7 +341,6 @@
                                         <label for="1-star" class="star">&#9733;</label>
                                         </div>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
@@ -358,7 +362,6 @@
                 {{/cursos_home}}
         </div>
     </section>
-
     <!--
     <footer class="footer text-center bg-dark">
         <p class="textColorWhite">Tema Escola Modelo <a href="http://www.interlegis.leg.br/" style="text-decoration: none;"><p class="littleTitle">Interlegis - 2019 Copyright - All Rights Reserved Terms of Service</p></a></p>
@@ -367,32 +370,25 @@
     {{>theme_escola_modelo/footer}}
 </body>
 </html>
-
 <script>
-   
-    $(document).ready(function() {
-        $('.item').first().addClass("active", "true");
-        $('.aviso').first().addClass("active", "true");
-    });
-
     function exibirInformacoes(informacao){
         jQuery.noConflict();
         $('#textoMaisInformacoes').html(informacao);
         $('#modalInformacoes').modal('show');
     }
-
+    $(document).ready(function() {
+        $('.item').first().addClass("active", "true");
+        $('.aviso').first().addClass("active", "true");
+    });
     function MudarEstado(el) {
         var display = document.getElementById(el).style.display;
         if (display == "none")
             document.getElementById(el).style.display = 'block';
-    } 
-
+    }
     $( "#formPesquisa" ).submit(function( event ) {
         event.preventDefault();
-
         var form = $(this);
         var url = "{{moodle_url}}/theme/escola_modelo/proxy_busca_cursos.php";
-
         $.ajax({
             type: "POST",
             url: url,
@@ -449,12 +445,9 @@
                                 </div>
                             </div>
                             `;
-
                         $("#cursosDisponiveis").append(curso);
-
                     });
                 }
-
                 //alert(data.cursos); // show response from the php script.
             },
             error: function(e) {
@@ -462,7 +455,6 @@
             }
         });
     });
-
 </script>
 {{#js}}
 require(['theme_boost/loader']);
