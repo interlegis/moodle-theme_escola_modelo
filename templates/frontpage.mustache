@@ -40,10 +40,8 @@
 <!-- Placeholders do template: não remover!!-->
 <!-- {{{ output.course_content_header }}} -->
 <!-- {{{ output.main_content }}}          -->
-
 <!-- {{{ output.course_content_footer }}} -->
 {{{ output.doctype }}}
-
 <html {{{ output.htmlattributes }}}>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -57,23 +55,19 @@
     <meta name="theme-color" content="#00305c" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>{{{casalegislativa_nome}}}</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{moodle_url}}/theme/escola_modelo/style/frontpage.css">
     <script src="{{moodle_url}}/theme/escola_modelo/js/frontpage.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-
 </head>
-
 <body {{{ bodyattributes }}}>
-
-    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark bigScreen" style="margin-bottom: 0px;">
         <div class="container">
             <div class="navbar-translate">
                 <label class="nav-item navbar-brand" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
@@ -86,26 +80,24 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                 	<li class="nav-item">
-                        <a href="#news" class="nav-link">
+                        <a href="#news" class="nav-link blackk">
                             <img src="https://img.icons8.com/dusk/64/000000/news.png" style="width: 20px;">  Comunicados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#mostViewed" class="nav-link">
+                        <a href="#mostViewed" class="nav-link blackk">
                             <img src="https://img.icons8.com/dusk/64/000000/best-seller.png" style="width: 20px;"> Mais Procurados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#courses" class="nav-link">
+                        <a href="#courses" class="nav-link blackk">
                             <img src="https://img.icons8.com/dusk/64/000000/book.png" style="width: 20px;"> Cursos
                         </a>
                     </li>
 					<li class="nav-item">
-                        <a href="#cover" class="nav-link">
+                        <a href="#cover" class="nav-link ">
                         <img src="https://img.icons8.com/dusk/64/000000/search.png" style="width: 20px;"></a>
                     </li>
-
-
                     <li class="nav-item">
                         
                         {{#user_picture_url}}
@@ -123,11 +115,40 @@
             </div>
         </div>
     </nav>
-
+    <nav class="navbar navbar-inverse navbar-expand-lg bg-dark smallScreen" id="navSmall" style="margin-bottom: 0px;">
+        <div class="container customMarginLogoSmallScreen noMargin maxWidth">
+            <div class="navbar-translate widthLogo">
+                <label class="nav-item navbar-brand noMargin" href="/presentation.html"><img src="https://evl.interlegis.leg.br/static/img/transparente_bfg.png" style="width:100px; height: 40px; background-color: white"></>
+            </div>
+            <div class="pull-right widthContent">
+                <div class="pull-right mr2p">
+                    <a href="{{{moodle_url}}}/auth/oauth2/login.php?id=1&wantsurl=%2F&sesskey={{session}}" class="buttonprop btn-blueInterlegis btnCustom btn-raised btn-round">
+                    Log In
+                    </a>
+                </div>
+                <div class="dropdown pull-right mr5p">
+                   <img id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 50px" src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/menu-256.png">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a href="#news" class="nav-link propertiesLinkNav">
+                            Comunicados
+                        </a>
+                        <a href="#mostViewed" class="nav-link propertiesLinkNav">
+                            Mais Procurados
+                        </a>
+                        <a href="#courses" class="nav-link propertiesLinkNav">
+                             Cursos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-right">
+            </div>
+        </div>
+    </nav>
     <div class="bgGradient">
 	    <div id="particles">
 		    <div id="webcoderskull">
-		        <h1>{{{sitename}}}</h1>
+		        <h1 class="">{{{sitename}}}</h1>
 		        <p class="littleSubtitle">{{{casalegislativa_nome}}}</p>
 		    </div>
 	    </div>
@@ -140,7 +161,7 @@
         <div class="">
             <div class="row mb-5 propertiesNews">
                 <div class="col-12 py-4 bg-dark">
-                    <div class="row">
+                    <div class="row paddingSmall">
                         <div style="width: 100%">
                             <div class="breaking-box">
                                 <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
@@ -150,7 +171,7 @@
                                         <div class="carousel-item aviso">
                                             <a href="{{{link}}}">
                                                 <span class="position-relative mx-2 badge badge-primary rounded-0 corNoticia" >{{{tag}}}</span>
-                                            </a> 
+                                            </a>
                                             <a class="text-white" href="{{{link}}}">
                                             <img src="{{{icone}}}" style="width: 20px;"> {{{titulo}}}
                                             </a>
@@ -158,7 +179,7 @@
 
                                         {{/noticias}}
                                     </div>
-                                    <div class="navigation-box p-2 d-none d-sm-block">
+                                    <div class="navigation-box p-2 d-sm-block">
                                         <a class="carousel-control-prev colorNext" href="#carouselbreaking" role="button" data-slide="prev">
                                             <i class="fa fa-angle-left" aria-hidden="true"></i>
                                             <span class="sr-only">Previous</span>
@@ -185,54 +206,77 @@
 		<br>
 		<h2 class="heading-secondary propertiesTitleCenter letterSpacing"> Cursos Mais Procurados</h2>
   	</div>
-
-    <div class="container cta-100">
-        <div class="container">
-          <div class="row blog">
-            <div class="col-md-12">
-              <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
-
-                <ol class="carousel-indicators">
-                  <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#blogCarousel" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row">
-                        {{#cursos_home}}
-                            <!--<h4>{{{nome}}}</h4>-->
-                            {{#cursos}}
-                            <div class="col-md-4" >
-                                <div class="item-box-blog">
-                                <div class="item-box-blog-image">
-                                    <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">20 de Agosto</span> </div>
-                                    <figure> <img alt="" src="{{{logo}}}"> </figure>
-                                </div>
-                                <div class="item-box-blog-body">
-                                    <div class="item-box-blog-heading">
-                                    <a href="#" tabindex="0">
-                                        <h5>{{{nome}}}</h5>
-                                    </a>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators carIndic">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner sizeCarousel">
+            {{#cursos_home}}
+                <div class="carousel-item item textAlignCenter">
+                    <div class="" >
+                        {{#.}} <!-- lista principal -->
+                            {{#.}} <!-- lista de blocos -->
+                                <div class="item-box-blog tam3cards noPadding marginResponsive">
+                                    <div class="w100p" style="position: absolute">
+                                        <div class="w50p float-left">
+                                        </div>
+                                        <div class="w50p float-right">
+                                            <div class="colorDarkGrey white"> <span class="mon">20 de Agosto</span> </div>
+                                        </div>
                                     </div>
-                                    <div class="item-box-blog-data" style="padding: 15px;">
-                                    <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(3)</p>
+                                    <div class="">
+                                        <div class="imgCourseTst">
+                                            <img class="imgCourseTst" src="https://saberes.senado.leg.br/pluginfile.php/2593044/course/overviewfiles/Conhecendo%20o%20Novo%20Acordo%20Ortogr%C3%A1fico-min.png">
+                                        </div>
+                                        <div class="w100p" style="position: absolute">
+                                            <div class="w50p float-left">
+                                                <a class="noLinkEffect" data-backdrop="static" href="javascript:exibirInformacoes('{{descricao}}')" data-target="#exampleModalLong">
+                                                     <div class="colorMaisInfo white sizeHeight paddingg">
+                                                         <span class="mon">Informações</span>
+                                                     </div>
+                                                </a>
+                                            </div>
+                                            <div class="w50p float-right">
+                                                <div class="colorInscrever white sizeHeight paddingg"> <span class="mon">Inscrever-se</span> </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="item-box-blog-text">
-                                    <p>{{{descricao}}}</p>
-                                    </div>
-                                    <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Ler Mais</a> </div>
                                 </div>
-                                </div>
-                            </div>
-                            {{/cursos}}
-                        {{/cursos_home}}
+                            {{/.}}
+                        {{/.}}
                     </div>
-                  </div>
                 </div>
-              </div>
+            {{/cursos_home}}
+            <div data-backdrop="static" class="modal fade" id="modalInformacoes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header padding2p">
+                            <h5 class="modal-title w100p">Mais Informações</h5>
+                            <div class="rowClose">
+                                <img data-dismiss="modal" class="xProperties" src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Close-256.png">
+                            </div>
+                        </div>
+                        <div id="textoMaisInformacoes" class="modal-body">
+                        </div>
+                        <div class="modal-footer row customrow">
+                            <button type="button" class="buttonprop btnVerde btn-block">Inscrever</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- Modal -->
         </div>
+        <a class="carousel-control-prev sizePassingModal " href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only redd">Previous</span>
+        </a>
+        <a class="carousel-control-next sizePassingModal" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only redd">Next</span>
+        </a>
     </div>
     <!-- Cursos disponíveis -->
     <section class="section-tours" id="courses">
@@ -248,7 +292,6 @@
                 <div class="tb">
                     <input type="text" required name='expression'>
                     <div class="td">
-                    <input type="hidden" required name='schooxl' value='SAB'>
                     </div>
                     <div class="td" id="s-cover">
                         <button type="submit">
@@ -326,17 +369,23 @@
 </html>
 
 <script>
-
+   
     $(document).ready(function() {
         $('.item').first().addClass("active", "true");
         $('.aviso').first().addClass("active", "true");
     });
 
+    function exibirInformacoes(informacao){
+        jQuery.noConflict();
+        $('#textoMaisInformacoes').html(informacao);
+        $('#modalInformacoes').modal('show');
+    }
+
     function MudarEstado(el) {
         var display = document.getElementById(el).style.display;
         if (display == "none")
             document.getElementById(el).style.display = 'block';
-    }
+    } 
 
     $( "#formPesquisa" ).submit(function( event ) {
         event.preventDefault();

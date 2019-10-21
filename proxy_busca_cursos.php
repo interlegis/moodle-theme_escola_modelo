@@ -14,7 +14,7 @@ header("Content-Type: application/json");
  // Obtém todas as mensagens de uma conversa
  if(isset($_REQUEST["expression"])) {
     $expression = $_REQUEST['expression'];
-    $school = $_REQUEST['school'];
+    $school = evlSiglaEscola();
     //$uri = evlURLWebServices() . '/api/v1/cursos/buscar';
     $uri = 'http://localhost:3000' . '/api/v1/cursos/buscar';
     $response = \Httpful\Request::post($uri)
