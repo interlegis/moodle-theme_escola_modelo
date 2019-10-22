@@ -64,6 +64,43 @@ function getJsonCursosHomeWS() {
 	return  $response->body;
 }
 
+// TODO: usar cache para evitar consultas a cada acesso
+function getJsonCursosDisponiveis() {
+	return json_decode(
+		'[
+			{
+				"id": "1",
+				"nome": "Curso 1",
+				"descricao": "Descrição do curso 1"
+			},
+			{
+				"id": "2",
+				"nome": "Curso 2",
+				"descricao": "Descrição do curso 2"
+			},
+			{
+				"id": "3",
+				"nome": "Curso 3",
+				"descricao": "Descrição do curso 3"
+			},
+			{
+				"id": "4",
+				"nome": "Curso 4",
+				"descricao": "Descrição do curso 4"
+			},
+			{
+				"id": "5",
+				"nome": "Curso 5",
+				"descricao": "Descrição do curso 5"
+			},
+			{
+				"id": "6",
+				"nome": "Curso 6",
+				"descricao": "Descrição do curso 6"
+			}
+		]'
+	);
+}
 
 function getJsonCursosHome() {
 	return json_decode(
@@ -146,7 +183,7 @@ function getAvisos() {
 $cursosHome = getJsonCursosHome();
 //$cursosHome = getJsonCursosHomeWS();
 $avisosHome = getAvisos();
-
+$cursosDisponiveis = getJsonCursosDisponiveis();
 
 if (isloggedin()) {
 	user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
@@ -216,7 +253,8 @@ if (isloggedin()) {
 		'session' => sesskey(),
 		'avisos' => $avisosHome,
 		'user_picture_url' => $user_picture_url,
-		'user_name' => $user_name
+		'user_name' => $user_name,
+		'cursos_disponiveis' => $cursosDisponiveis
 	];
 
 // Descobrir quais categorias de curso estão disponíveis para serem exibidas
@@ -267,7 +305,8 @@ if (isloggedin()) {
 		'session' => sesskey(),
 		'avisos' => $avisosHome,
 		'user_picture_url' => '',
-		'user_name' => ''
+		'user_name' => '',
+		'cursos_disponiveis' => $cursosDisponiveis
 	];
 }
 

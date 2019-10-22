@@ -311,55 +311,48 @@
             </form>
         </div>
         <div id='cursosDisponiveis' class="roww">
-                {{#cursos_home}}
-                {{#categorias}}
-                {{#categoria}}
-                    <!--<h4>{{{nome}}}</h4> -->
-                    {{#cursos}}
-                    <div class="card cardProp">
-                        <div class="card__side card__side--front">
-                            <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
-                            </div>
-                            <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--2">{{{nome}}}</span>
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li><b>Certificador: </b> SBH</li>
-                                    <li><b>Conteudista: </b>ILB</li>
-                                    <li><b>Carga Horária: </b>30h</li>
-                                    <li><div class="star-rating">
-                                        <input type="radio" id="5-stars" name="rating" value="5" />
-                                        <label for="5-stars" class="star">&#9733;</label>
-                                        <input type="radio" id="4-stars" name="rating" value="4" />
-                                        <label for="4-stars" class="star">&#9733;</label>
-                                        <input type="radio" id="3-stars" name="rating" value="3" />
-                                        <label for="3-stars" class="star">&#9733;</label>
-                                        <input type="radio" id="2-stars" name="rating" value="2" />
-                                        <label for="2-stars" class="star">&#9733;</label>
-                                        <input type="radio" id="1-star" name="rating" value="1" />
-                                        <label for="1-star" class="star">&#9733;</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+            {{#cursos_disponiveis}}
+                <div class="card cardProp">
+                    <div class="card__side card__side--front">
+                        <div style='background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(http://localhost/saberes/theme/image.php?theme=escola_modelo&component=theme&image=2_imagem_card) !important;' class="card__picture">
                         </div>
-                        <div class="card__side card__side--back card__side--back-2 pos">
-                            <div class="card__cta">
-                                <div class="card__price-box">
-                                    <h1 class="h1Properties">{{{nome}}}</h1>
-                                    <p style="text-align: justify;">{{{descricao}}}</p>
-                                    <div class="posBottom">
-                                        <a href="" type="button" class="btn btn-inscrever btn-block">Matricular</a>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--2">{{{nome}}}</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li><b>Certificador: </b> SBH</li>
+                                <li><b>Conteudista: </b>ILB</li>
+                                <li><b>Carga Horária: </b>30h</li>
+                                <li><div class="star-rating">
+                                    <input type="radio" id="5-stars" name="rating" value="5" />
+                                    <label for="5-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="4-stars" name="rating" value="4" />
+                                    <label for="4-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="3-stars" name="rating" value="3" />
+                                    <label for="3-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="2-stars" name="rating" value="2" />
+                                    <label for="2-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="1-star" name="rating" value="1" />
+                                    <label for="1-star" class="star">&#9733;</label>
                                     </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-2 pos">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <h1 class="h1Properties">{{{nome}}}</h1>
+                                <p style="text-align: justify;">{{{descricao}}}</p>
+                                <div class="posBottom">
+                                    <a href="" type="button" class="btn btn-inscrever btn-block">Matricular</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{/cursos}}
-                {{/categoria}}
-                {{/categorias}}
-                {{/cursos_home}}
+                </div>
+            {{/cursos_disponiveis}}
         </div>
     </section>
     <!--
